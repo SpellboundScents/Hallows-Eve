@@ -9,8 +9,10 @@
  */
 {
   "current": {
-    "logo_width": 90,
-    "type_header_font": "assistant_n4",
+    "logo": "shopify://shop_images/logo_transparent_white.png",
+    "logo_width": 100,
+    "favicon": "shopify://shop_images/LOGO1x1.png",
+    "type_header_font": "pacifico_n4",
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
     "body_scale": 100,
@@ -18,6 +20,7 @@
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
+    "animations_reveal_on_scroll": true,
     "buttons_border_thickness": 1,
     "buttons_border_opacity": 100,
     "buttons_radius": 0,
@@ -103,7 +106,7 @@
     "badge_corner_radius": 40,
     "sale_badge_color_scheme": "scheme-5",
     "sold_out_badge_color_scheme": "scheme-3",
-    "social_facebook_link": "",
+    "social_facebook_link": "https://www.facebook.com/groups/962947508546255/",
     "social_instagram_link": "",
     "social_youtube_link": "",
     "social_tiktok_link": "",
@@ -114,12 +117,12 @@
     "social_vimeo_link": "",
     "predictive_search_enabled": true,
     "predictive_search_show_vendor": false,
-    "predictive_search_show_price": false,
+    "predictive_search_show_price": true,
     "currency_code_enabled": true,
     "cart_type": "notification",
     "show_vendor": false,
     "show_cart_note": false,
-    "cart_drawer_collection": "",
+    "cart_drawer_collection": "clearance",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
