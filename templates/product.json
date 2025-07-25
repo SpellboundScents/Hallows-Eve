@@ -64,6 +64,32 @@
             "show_gift_card_recipient": true
           }
         },
+        "sendvio_email_sms_back_in_stock_zdrkmP": {
+          "type": "shopify://apps/sendvio-email-sms/blocks/back_in_stock/6fb7816d-63ad-49f9-ae13-e7c831b17dc6",
+          "settings": {
+            "btn_text": "Notify me when available",
+            "heading_text": "<h3>Notify me when it's back in stock</h3>",
+            "form_fields": "email_and_sms",
+            "placeholder_email": "Enter your email",
+            "placeholder_phone_number": "Enter your phone number",
+            "chk_show_permission_chk": true,
+            "optin_message": "<p>Subscribe to receive news and offers.</p>",
+            "chk_error_message": "<p>Please indicate that you have read and agree to the Privacy Policy before submitting your data.</p>",
+            "subscription_button_text": "Notify me",
+            "subscription_message": "<p>We will notify you when this product is available again. Your email address will not be shared with anyone else.</p>",
+            "success_message": "<h2>Thank you for subscribing.</h2>",
+            "text_font_scale": 120,
+            "background_color": "",
+            "texts_color": "#000000",
+            "buttons_text_color": "#fffaf0",
+            "buttons_background": "",
+            "outline_button": "",
+            "padding_top": 10,
+            "padding_bottom": 10,
+            "padding_horizontal": 15,
+            "customer_tags": ""
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
@@ -81,6 +107,7 @@
         "quantity_selector",
         "inventory_Vx8Wbc",
         "buy_buttons",
+        "sendvio_email_sms_back_in_stock_zdrkmP",
         "share"
       ],
       "settings": {
