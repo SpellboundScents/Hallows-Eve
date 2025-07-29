@@ -3648,3 +3648,10 @@ button.predictive-search__item--term {
 label[for*="Search"] {
   display: none !important;
 }
+/* Spellbound Scents: Rounded buttons everywhere */
+.button,
+.shopify-challenge__button,
+.customer button,
+button.shopify-payment-button__button--unbranded {
+  border-radius: 2rem !important; /* Adjust the value for more or less curve */
+}
