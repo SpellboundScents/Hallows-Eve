@@ -64,8 +64,8 @@
     "page_MBAXhe": {
       "type": "page",
       "custom_css": [
-        "img {box-shadow: none; border-radius: 2rem; transition: box-shadow 0.4s cubic-bezier(0.3,0.7,0.4,1);}",
-        "img:hover {box-shadow: 0 0 32px 8px #a855f77a; /* Shows only on hover */}"
+        "img {border: 2px solid #f6e05e; /* candy corn yellow */ border-radius: 2rem; box-shadow: 0 0 10px 2px #0003; /* faint shadow for pop */}",
+        "img:hover {border: 2px solid #f97316; /* candy corn orange on hover */ box-shadow: 0 0 24px 6px #a855f755;}"
       ],
       "name": "t:sections.page.presets.name",
       "settings": {
