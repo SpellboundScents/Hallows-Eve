@@ -3603,3 +3603,41 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
+/* === Spellbound Scents Custom Candy Corn Search Bar === */
+.search__input,
+.predictive-search__input,
+.search-modal__form input[type="search"] {
+  background-color: #1f1f1f !important;   /* Deep background */
+  color: #fffaf0 !important;              /* Candy corn white */
+  border: 2px solid #f97316 !important;   /* Candy corn orange border */
+  border-radius: 1.5rem !important;
+  box-shadow: 0 2px 8px 0 #a855f733;      /* Optional: purple accent shadow */
+}
+
+.search__input::placeholder,
+.predictive-search__input::placeholder,
+.search-modal__form input[type="search"]::placeholder {
+  color: #f6e05e !important;              /* Candy corn yellow */
+  opacity: 1 !important;
+}
+
+.search-modal__form,
+.search-modal__content {
+  background: #1f1f1f !important;         /* Deep background */
+}
+
+button.search__button,
+button.predictive-search__item--term {
+  color: #f97316 !important;              /* Orange search icon/button */
+}
+
+/* Search dropdown results */
+.predictive-search__results,
+.predictive-search__result-group {
+  background: #1f1f1f !important;         /* Deep background for dropdown */
+  color: #fffaf0 !important;              /* White text */
+}
+
+.predictive-search__item--link {
+  border-bottom: 1px solid #f6e05e !important;  /* Yellow divider */
+}
