@@ -72,3 +72,30 @@ input::-webkit-search-decoration {
 .template-search__results {
   position: relative;
 }
+/* Custom search colors */
+.search__input.field__input {
+  color: #f97316;
+  background-color: #f6e05;
+}
+
+.field__label {
+  color: #f6e05;
+}
+
+/* Search results styling */
+.template-search__results,
+.template-search__results * {
+  color: #fffaf0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Ensure search result links are visible */
+.template-search__results a {
+  color: #fffaf0;
+}
+
+/* Title styling */
+.template-search__header h1,
+.template-search__header .h2 {
+  color: #f6e05;
+}
