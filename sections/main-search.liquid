@@ -41,26 +41,53 @@
   .search__button .icon {
     height: 1.8rem;
   }
-  /* Search title and text box */
-  .search-title, .search-form label {
+<style>
+  .template-search__header {
+    margin-bottom: 3rem;
+  }
+
+  .template-search__search {
+    margin: 0 auto 3.5rem;
+    max-width: 74.1rem;
+  }
+
+  .template-search__search .search {
+    margin-top: 3rem;
+  }
+
+  .template-search--empty {
+    padding-bottom: 18rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    .template-search__header {
+      margin-bottom: 5rem;
+    }
+  }
+
+  .search__button .icon {
+    height: 1.8rem;
+  }
+
+  /* Custom colors */
+  .template-search__header h1,
+  .field__label {
     color: #f6e05;
   }
   
-  /* Search input text */
-  .search-form input[type="search"] {
+  .search__input {
     color: #f97316;
     background-color: #f6e05;
   }
   
-  /* Search results */
-  .search-results {
-    background-color: rgba(0, 0, 0, 0.8); /* opaque background */
+  .template-search .card,
+  .template-search .card *,
+  .template-search .product-card-wrapper,
+  .template-search .product-card-wrapper * {
     color: #fffaf0;
+    background-color: rgba(0, 0, 0, 0.8);
   }
-  
-  .search-results * {
-    color: #fffaf0;
-  }
+</style>
 
 </style>
 
