@@ -6,7 +6,7 @@
   --focused-base-outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   --focused-base-outline-offset: 0.3rem;
   --focused-base-box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
-  --color-background: #121212;
+  --color-background: #1B1B1B;
   --color-foreground: #fffaf0;
   --color-primary: #f97316; /* candy corn orange */
   --color-secondary: #f6e05e; /* candy corn yellow */
