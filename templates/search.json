@@ -12,7 +12,8 @@
     "main": {
       "type": "main-search",
       "custom_css": [
-        "body.template-search {color: #f97316; }"
+        "/* Search input field */input[type=\"search\"], .search-input,.search-form input {color: #f97316;}",
+        "/* Search placeholder text */input[type=\"search\"]::placeholder,.search-input::placeholder {color: #f97316;}"
       ],
       "settings": {
         "columns_desktop": 4,
