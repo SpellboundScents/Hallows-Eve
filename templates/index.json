@@ -44,7 +44,7 @@
         "buttons_VrbQUQ"
       ],
       "custom_css": [
-        ".banner__box.content-container {border-radius: 2rem !important; /* Rounded corners */ background: rgba(31,31,31,0.85) !important; /* Optional: dark semi-transparent background */ padding: 2rem !important; /* Optional: adds space inside the box */ box-shadow: 0 4px 16px 0 #a855f77a; /* Optional: subtle purple shadow for effect */ border: 2px solid #f6e05e !important; /* Optional: candy corn yellow border */}"
+        ".banner__box.content-container {border-radius: 2rem !important; /* Rounded corners */ background: rgba( 31, 31, 31, 0.85 ) !important; /* Optional: dark semi-transparent background */ padding: 2rem !important; /* Optional: adds space inside the box */ box-shadow: 0 4px 16px 0 #a855f77a; /* Optional: subtle purple shadow for effect */ border: 2px solid #f6e05e !important; /* Optional: candy corn yellow border */}"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
@@ -63,6 +63,7 @@
     },
     "page_MBAXhe": {
       "type": "page",
+      "custom_css": [],
       "name": "t:sections.page.presets.name",
       "settings": {
         "page": "next-rts",
