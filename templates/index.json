@@ -63,7 +63,10 @@
     },
     "page_MBAXhe": {
       "type": "page",
-      "custom_css": [],
+      "custom_css": [
+        ".event-banner-img {box-shadow: 0 0 32px 8px #a855f7, 0 0 72px 16px #a855f755; border-radius: 2rem; transition: box-shadow 0.4s cubic-bezier(0.3,0.7,0.4,1);}",
+        ".event-banner-img:hover {box-shadow: 0 0 48px 16px #a855f7, 0 0 120px 32px #a855f799;}"
+      ],
       "name": "t:sections.page.presets.name",
       "settings": {
         "page": "next-rts",
