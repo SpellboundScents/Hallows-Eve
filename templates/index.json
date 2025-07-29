@@ -64,8 +64,8 @@
     "page_MBAXhe": {
       "type": "page",
       "custom_css": [
-        "img {border: 2px solid #f6e05e; /* candy corn yellow */ border-radius: 2rem; box-shadow: 0 0 10px 2px #0003; /* faint shadow for pop */}",
-        "img:hover {border: 2px solid #f97316; /* candy corn orange on hover */ box-shadow: 0 0 24px 6px #a855f755;}"
+        "img {border: 2px solid #f6e05e; /* candy corn yellow */ border-radius: 2rem; box-shadow: 0 0 8px 2px #a855f733; /* subtle purple accent */ transition: box-shadow 0.4s, border-color 0.3s;}",
+        "img:hover {border: 2px solid #f97316; /* orange border on hover */ box-shadow: 0 0 20px 6px #a855f788; /* slightly more glow */}"
       ],
       "name": "t:sections.page.presets.name",
       "settings": {
