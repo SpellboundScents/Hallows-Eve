@@ -3641,20 +3641,6 @@ button.predictive-search__item--term {
 .predictive-search__item--link {
   border-bottom: 1px solid #f6e05e !important;  /* Yellow divider */
 }
-/* Fix Dawn search label color and size */
-.search-modal__form label,
-.search__form label,
-.search__label,
-.predictive-search__label {
-  color: #f6e05e !important;    /* Candy corn yellow */
-  font-size: 1.1rem !important; /* Slightly bigger if desired */
-  position: absolute;
-  left: 2.2rem;
-  top: 1.4rem;
-  pointer-events: none;
-  z-index: 2;
-  opacity: 0.9;
-}
 
 .search-modal__form label[for="Search-In-Modal"] {
   /* Optional: Hide the label entirely if you prefer just the placeholder */
