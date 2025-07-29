@@ -3653,5 +3653,9 @@ label[for*="Search"] {
 .shopify-challenge__button,
 .customer button,
 button.shopify-payment-button__button--unbranded {
-  border-radius: 2rem !important; /* Adjust the value for more or less curve */
+  .button::after,
+.shopify-challenge__button::after,
+.customer button::after,
+button.shopify-payment-button__button--unbranded::after {
+  border-radius: 2rem !important;
 }
