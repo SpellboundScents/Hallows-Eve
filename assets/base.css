@@ -3667,12 +3667,4 @@ button.shopify-payment-button__button--unbranded,
 button.shopify-payment-button__button--unbranded::after {
   border-radius: 2rem !important;
 }
-.template-index .page-section img {
-  box-shadow: 0 0 32px 8px #a855f7, 0 0 72px 16px #a855f755;
-  border-radius: 2rem;
-  transition: box-shadow 0.4s cubic-bezier(0.3,0.7,0.4,1);
-}
-.template-index .page-section img:hover {
-  box-shadow: 0 0 48px 16px #a855f7, 0 0 120px 32px #a855f799;
-}
 
