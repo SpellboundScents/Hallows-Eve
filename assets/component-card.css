@@ -593,3 +593,18 @@
     clip-path: polygon(var(--shape--blob-5));
   }
 }
+/* Spellbound Scents: Black background for product cards */
+.card--product,
+.product-card-wrapper .card,
+.contains-card--product .card {
+  background: #1f1f1f !important;       /* deep black */
+  border-radius: 1.5rem !important;     /* match your site's rounded vibe */
+  box-shadow: 0 2px 12px 0 #0006;       /* optional: subtle shadow for pop */
+  border: 2px solid #f6e05e !important; /* optional: candy corn yellow border */
+  color: #fffaf0 !important;            /* ensure text stays readable */
+}
+
+/* Optional: if you want extra spacing inside cards */
+.card--product .card__content {
+  padding: 2rem !important;
+}
