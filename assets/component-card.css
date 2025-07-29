@@ -603,8 +603,3 @@
   border: 2px solid #f6e05e !important; /* optional: candy corn yellow border */
   color: #fffaf0 !important;            /* ensure text stays readable */
 }
-
-/* Optional: if you want extra spacing inside cards */
-.card--product .card__content {
-  padding: 2rem !important;
-}
