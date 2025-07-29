@@ -3642,7 +3642,10 @@ button.predictive-search__item--term {
   border-bottom: 1px solid #f6e05e !important;  /* Yellow divider */
 }
 
-.search-modal__form label[for="Search-In-Modal"] {
-  /* Optional: Hide the label entirely if you prefer just the placeholder */
+/* Fix overlapping "Search" text in Dawn search bar */
+
+/* Hide search label in modal */
+.search-modal__form label[for="Search-In-Modal"],
+.search-modal__form label[for="Search"] {
   display: none !important;
 }
