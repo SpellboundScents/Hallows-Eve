@@ -3644,9 +3644,7 @@ button.predictive-search__item--term {
 
 /* Fix overlapping "Search" text in Dawn search bar */
 
-/* If search input outside modal, try these: */
-.search__form label,
-.search__label,
-label[for="Search"] {
+/* For the most stubborn cases: */
+label[for*="Search"] {
   display: none !important;
 }
