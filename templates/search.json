@@ -11,11 +11,7 @@
   "sections": {
     "main": {
       "type": "main-search",
-      "custom_css": [
-        "/* Search box color */input[type=\"search\"], .search-input,.search-form input {color: #f97316;}",
-        "input[type=\"search\"]::placeholder,.search-input::placeholder {color: #f97316;}",
-        "/* Search results color */.search-results,.search-results *,.search-results .product-title,.search-results .product-description,.search-results p {color: #fffaf0;}"
-      ],
+      "custom_css": [],
       "settings": {
         "columns_desktop": 4,
         "columns_mobile": "2",
@@ -32,9 +28,14 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "1753827574de2a7d56": {
+      "type": "_blocks",
+      "settings": {}
     }
   },
   "order": [
-    "main"
+    "main",
+    "1753827574de2a7d56"
   ]
 }
