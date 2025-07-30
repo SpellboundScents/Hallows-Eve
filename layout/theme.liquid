@@ -372,21 +372,5 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-
-<script>
-document.addEventListener('click', function(e) {
-  // Prevent in admin/editor
-  if(window.Shopify && Shopify.designMode) return;
-  var bat = document.createElement('div');
-  bat.className = 'bat-flyaway';
-  bat.style.left = (e.clientX - 20) + 'px';
-  bat.style.top = (e.clientY - 10) + 'px';
-  document.body.appendChild(bat);
-  setTimeout(function() {
-    bat.remove();
-  }, 1200);
-});
-</script>
-  
   </body>
 </html>
