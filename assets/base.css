@@ -3692,6 +3692,7 @@ button.shopify-payment-button__button--unbranded::after {
     transition: box-shadow 0.18s, background-color 0.18s;
   }
 }
+/* Zoom on hover image */
 @media (hover: hover) and (pointer: fine) {
   .product-card-wrapper .card__media {
     overflow: visible !important;
