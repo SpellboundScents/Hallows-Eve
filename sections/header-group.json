@@ -14,16 +14,48 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_LnTKpJ": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome To Our Store",
+            "link": ""
+          }
+        },
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
             "text": "FREE SHIPPING OVER $120!",
             "link": ""
           }
+        },
+        "announcement_ndzLYk": {
+          "type": "announcement",
+          "settings": {
+            "text": "Join the Mailing List for Offers and RTS Dates!",
+            "link": ""
+          }
+        },
+        "announcement_8hyKUb": {
+          "type": "announcement",
+          "settings": {
+            "text": "Join Our Facebook Group for Upcoming Blends!",
+            "link": "https://www.facebook.com/groups/962947508546255/"
+          }
+        },
+        "announcement_a7d7MH": {
+          "type": "announcement",
+          "settings": {
+            "text": "RTS August 9 @ 1pm EST",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement_LnTKpJ",
+        "announcement-bar-0",
+        "announcement_ndzLYk",
+        "announcement_8hyKUb",
+        "announcement_a7d7MH"
       ],
       "settings": {
         "auto_rotate": false,
