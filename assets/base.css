@@ -3687,9 +3687,11 @@ button.shopify-payment-button__button--unbranded::after {
 /* Glow on Hover */
 @media (hover: hover) and (pointer: fine) {
   a:hover, button:hover, [role="button"]:hover, .button:hover, input[type="submit"]:hover, label:hover, select:hover {
-    box-shadow: 0 0 8px 2px #a855f72a;
-    transition: box-shadow 0.2s;
+    box-shadow: 0 0 6px 1px #a855f72a;
+    background-color: #a855f72a !important;
+    transition: box-shadow 0.18s, background-color 0.18s;
   }
 }
+
 
 
