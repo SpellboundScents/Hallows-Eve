@@ -3670,20 +3670,20 @@ button.shopify-payment-button__button--unbranded::after {
 /* Bat Flyaway*/
 .bat-flyaway {
   position: fixed;
-  width: 48px;
-  height: 28px;
+  width: 40px;
+  height: 20px;
   left: 0;
   top: 0;
   pointer-events: none;
   z-index: 9999;
-  animation: bat-fly 1.3s cubic-bezier(.47,1.64,.41,.8) forwards;
-  background: url('data:image/svg+xml;utf8,<svg fill="black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 20"><path d="M1,20 Q15,2 20,15 Q25,2 39,20 Q30,11 20,19 Q10,11 1,20Z" /></svg>') center/contain no-repeat;
-  /* You can adjust fill or size above for your style! */
+  animation: bat-fly 1.2s cubic-bezier(.47,1.64,.41,.8) forwards;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="20" viewBox="0 0 40 20"><path fill="black" d="M1,20 Q15,2 20,15 Q25,2 39,20 Q30,11 20,19 Q10,11 1,20Z"/></svg>') center/contain no-repeat;
 }
 
 @keyframes bat-fly {
   to {
-    transform: translateY(-220px) scale(1.2) rotate(-30deg);
+    transform: translateY(-180px) scale(1.2) rotate(-24deg);
     opacity: 0;
   }
 }
+
