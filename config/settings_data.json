@@ -56,7 +56,7 @@
     "collection_card_style": "standard",
     "collection_card_image_padding": 0,
     "collection_card_text_alignment": "left",
-    "collection_card_color_scheme": "scheme-2",
+    "collection_card_color_scheme": "scheme-1",
     "collection_card_border_thickness": 0,
     "collection_card_border_opacity": 10,
     "collection_card_corner_radius": 12,
@@ -392,5 +392,11 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      "/* Make product card titles larger or smaller */.card__heading, .product-card-wrapper .card__heading, .contains-card--product .card__heading {font-size: 1.4rem !important; /* Adjust this number as you like (1.4rem ≈ 22px) */ line-height: 1.3; font-weight: bold;}",
+      ".card__heading a,.product-card-wrapper .card__heading a,.contains-card--product .card__heading a {font-size: inherit !important; color: inherit; text-decoration: none;}"
+    ]
   }
 }
