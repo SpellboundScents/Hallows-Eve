@@ -3707,5 +3707,10 @@ button.shopify-payment-button__button--unbranded::after {
   box-shadow: 0 8px 32px #0004;
   z-index: 10;
 }
+.card__media,
+.product-card-wrapper .card__media {
+  overflow: visible !important;
+}
+
 
 
