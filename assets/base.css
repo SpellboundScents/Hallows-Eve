@@ -3670,9 +3670,7 @@ button.shopify-payment-button__button--unbranded::after {
 
 /* Candy Corn Cursor */
 @media (hover: hover) and (pointer: fine) {
-  body,
-body,
-html {
+ a, button, [role="button"], .button, input[type="submit"] {
   cursor: url('https://cdn.shopify.com/s/files/1/0761/7046/1400/files/candycorn_melty_cursor.png?v=1753834716') 16 16, auto;
   }
 }
