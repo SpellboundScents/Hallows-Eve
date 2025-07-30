@@ -3700,10 +3700,9 @@ button.shopify-payment-button__button--unbranded::after {
   cursor: zoom-in;
   z-index: 1;
 }
-
 .card__media:hover img,
 .product-card-wrapper .card__media:hover img {
-  transform: scale(2.1); /* Increase this number for more zoom */
+  transform: scale(2.5);
   box-shadow: 0 8px 32px #0004;
   z-index: 10;
 }
