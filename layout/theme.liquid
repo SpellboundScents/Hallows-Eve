@@ -372,23 +372,5 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
- <script>
-document.addEventListener('click', function(e) {
-  // Create bat
-  const bat = document.createElement('div');
-  bat.className = 'bat-flyaway';
-  // Position at click point (adjust for scroll)
-  bat.style.left = (e.clientX - 24) + 'px'; // center bat horizontally
-  bat.style.top = (e.clientY - 14) + 'px';  // center bat vertically
-
-  document.body.appendChild(bat);
-
-  // Remove bat after animation
-  setTimeout(() => {
-    bat.remove();
-  }, 1400);
-});
-</script>
-
   </body>
 </html>
