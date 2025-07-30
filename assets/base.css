@@ -3693,20 +3693,7 @@ button.shopify-payment-button__button--unbranded::after {
   }
 }
 /* Zoom on hover image */
-@media (hover: hover) and (pointer: fine) {
-  .product-card-wrapper .card__media img {
-    transition: transform 0.22s cubic-bezier(.3,.7,.4,1), box-shadow 0.22s;
-    cursor: zoom-in;
-    will-change: transform;
-    z-index: 2;
-    position: relative;
-  }
-  .product-card-wrapper .card__media:hover img {
-    transform: scale(1.7); /* Try a smaller zoom for less layout impact */
-    box-shadow: 0 4px 24px #a855f733;
-    border-radius: 0.7rem;
-  }
-}
+
 
 
 
