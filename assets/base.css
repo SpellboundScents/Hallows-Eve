@@ -3684,3 +3684,12 @@ button.shopify-payment-button__button--unbranded::after {
   }
 }
 
+/* Glow on Hover */
+@media (hover: hover) and (pointer: fine) {
+  a:hover, button:hover, [role="button"]:hover, .button:hover, input[type="submit"]:hover, label:hover, select:hover {
+    box-shadow: 0 0 16px 4px #a855f7bb;
+    transition: box-shadow 0.2s;
+  }
+}
+
+
