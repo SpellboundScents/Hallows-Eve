@@ -3666,24 +3666,3 @@ button.shopify-payment-button__button--unbranded,
 .customer button::after,
 button.shopify-payment-button__button--unbranded::after {
   border-radius: 2rem !important;
-}
-/* Bat Flyaway*/
-.bat-flyaway {
-  position: fixed;
-  width: 40px;
-  height: 20px;
-  left: 0;
-  top: 0;
-  pointer-events: none;
-  z-index: 9999;
-  animation: bat-fly 1.2s cubic-bezier(.47,1.64,.41,.8) forwards;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="20" viewBox="0 0 40 20"><path fill="black" d="M1,20 Q15,2 20,15 Q25,2 39,20 Q30,11 20,19 Q10,11 1,20Z"/></svg>') center/contain no-repeat;
-}
-
-@keyframes bat-fly {
-  to {
-    transform: translateY(-180px) scale(1.2) rotate(-24deg);
-    opacity: 0;
-  }
-}
-
