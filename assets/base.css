@@ -3666,3 +3666,13 @@ button.shopify-payment-button__button--unbranded,
 .customer button::after,
 button.shopify-payment-button__button--unbranded::after {
   border-radius: 2rem !important;
+}
+
+/* Candy Corn Cursor */
+@media (hover: hover) and (pointer: fine) {
+  body,
+body,
+html {
+  cursor: url('https://cdn.shopify.com/s/files/1/0761/7046/1400/files/candycorn_meltypng?v=1753834343') 16 16, auto;
+  }
+}
