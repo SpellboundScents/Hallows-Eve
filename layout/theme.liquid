@@ -372,5 +372,66 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Only run on desktop
+  if (window.innerWidth < 750) return;
+
+  document.body.addEventListener('mousedown', function(e) {
+    // Check for existing overlay
+    if (document.getElementById('sb-zoom-overlay')) return;
+
+    // Find the product card image element
+    let img = e.target.closest('.card__media img, .product-card-wrapper .card__media img');
+    if (!img) return;
+
+    // Create the overlay div
+    let overlay = document.createElement('div');
+    overlay.id = 'sb-zoom-overlay';
+    overlay.style.position = 'fixed';
+    overlay.style.left = '0';
+    overlay.style.top = '0';
+    overlay.style.width = '100vw';
+    overlay.style.height = '100vh';
+    overlay.style.background = 'rgba(20, 17, 31, 0.93)';
+    overlay.style.zIndex = 99999;
+    overlay.style.display = 'flex';
+    overlay.style.alignItems = 'center';
+    overlay.style.justifyContent = 'center';
+    overlay.style.cursor = 'zoom-out';
+
+    // Create the enlarged image
+    let zoomImg = document.createElement('img');
+    zoomImg.src = img.src;
+    zoomImg.alt = img.alt || '';
+    zoomImg.style.maxWidth = '95vw';
+    zoomImg.style.maxHeight = '85vh';
+    zoomImg.style.borderRadius = '2rem';
+    zoomImg.style.boxShadow = '0 8px 48px #a855f755, 0 0 8px #000a';
+    zoomImg.style.background = '#222';
+
+    overlay.appendChild(zoomImg);
+    document.body.appendChild(overlay);
+
+    // Prevent page scroll when overlay is open
+    document.body.style.overflow = 'hidden';
+
+    // Remove overlay and unlock scroll on click or Esc
+    function removeOverlay() {
+      if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', escListener);
+    }
+
+    overlay.addEventListener('click', removeOverlay);
+    function escListener(evt) {
+      if (evt.key === 'Escape') removeOverlay();
+    }
+    document.addEventListener('keydown', escListener);
+  });
+});
+</script>
+
   </body>
 </html>
