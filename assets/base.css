@@ -3758,3 +3758,17 @@ button.shopify-payment-button__button--unbranded::after {
   line-height: 4.8em !important;
   letter-spacing: 0.04em !important;
 }
+#ContactForm .button[type="submit"]:hover {
+  background: linear-gradient(
+    to bottom,
+    #fffbe8 0%,
+    #fffbe8 34%,
+    #fef5ad 34%,
+    #fef5ad 67%,
+    #fd922b 67%,
+    #fd922b 100%
+  ) !important;
+  color: #fffaf0 !important;
+  transform: translateY(-2px) scale(1.06) rotate(-2deg) !important;
+  box-shadow: 0 8px 32px #a855f744, 0 1.2em 1.8em #f6e05e55 !important;
+}
