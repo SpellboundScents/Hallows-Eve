@@ -3729,82 +3729,46 @@ button.shopify-payment-button__button--unbranded::after {
 
 #ContactForm .button[type="submit"] {
   display: inline-block !important;
-  position: relative !important;
-  width: 5.2em !important;
-  height: 5.2em !important;
+  width: 5em !important;
+  height: 5em !important;
   min-width: 0 !important;
   min-height: 0 !important;
   padding: 0 !important;
   border: none !important;
-  outline: none !important;
-  background: none !important;
-  box-shadow: none !important;
-  cursor: pointer !important;
-  font-size: 1em !important;
-  color: #a855f7 !important;
-  font-weight: bold !important;
-  letter-spacing: 0.05em !important;
-  text-align: center !important;
-  vertical-align: middle !important;
-  margin: 1em auto 0 auto !important;
-  border-color: transparent !important;
-}
-
-/* Candy corn triangle with rounded bottom */
-#ContactForm .button[type="submit"]::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-  width: 5.2em;
-  height: 5.2em;
-  background: linear-gradient(
-    to top,
-    #f97316 0%,
-    #f97316 37%,
-    #f6e05e 37%,
-    #f6e05e 75%,
-    #fffaf0 75%,
-    #fffaf0 100%
-  );
-  border-bottom-left-radius: 2.8em 2.5em;
-  border-bottom-right-radius: 2.8em 2.5em;
-  border-top-left-radius: 1.1em 0.8em;
-  border-top-right-radius: 1.1em 0.8em;
-  clip-path: polygon(50% 6%, 96% 98%, 4% 98%);
-  z-index: 0;
-  box-shadow: 0 4px 22px #f6e05e88, 0 2px 8px #a855f744;
-  border: none;
-}
-
-/* Center the label on the candy corn */
-#ContactForm .button[type="submit"] span,
-#ContactForm .button[type="submit"] {
+  border-radius: 50% 50% 70% 70% / 45% 45% 95% 95% !important;
   position: relative !important;
-  z-index: 1 !important;
-  display: inline-block;
-  top: 2.1em;
-  width: 100%;
-  color: #a855f7 !important;
-  text-shadow: 0 1px 6px #fff8, 0 0.5px 0 #f97316a0 !important;
-  font-weight: bold !important;
-  text-align: center !important;
-  pointer-events: none;
-}
-
-#ContactForm .button[type="submit"]:hover::before {
   background: linear-gradient(
-    to top,
-    #fd922b 0%,
-    #fd922b 37%,
-    #fef5ad 37%,
-    #fef5ad 75%,
-    #fffbe8 75%,
-    #fffbe8 100%
-  );
-  box-shadow: 0 10px 34px #a855f744, 0 1.2em 1.8em #f6e05e77;
+    to bottom,
+    #fffaf0 0%,
+    #fffaf0 34%,
+    #f6e05e 34%,
+    #f6e05e 67%,
+    #f97316 67%,
+    #f97316 100%
+  ) !important;
+  color: #a855f7 !important;
+  font-weight: bold !important;
+  font-size: 1.18em !important;
+  cursor: pointer !important;
+  margin: 0.8em auto 0 auto !important;
+  box-shadow: 0 8px 24px #f6e05e55, 0 2px 8px #a855f733 !important;
+  transition: box-shadow 0.15s, transform 0.13s !important;
+  text-shadow: 0 1px 6px #fff8, 0 0.5px 0 #f97316a0 !important;
+  text-align: center !important;
+  line-height: 4.8em !important;
+  letter-spacing: 0.04em !important;
 }
 #ContactForm .button[type="submit"]:hover {
-  transform: translateY(-2px) scale(1.04) rotate(-2deg) !important;
+  background: linear-gradient(
+    to bottom,
+    #fffbe8 0%,
+    #fffbe8 34%,
+    #fef5ad 34%,
+    #fef5ad 67%,
+    #fd922b 67%,
+    #fd922b 100%
+  ) !important;
+  color: #fffaf0 !important;
+  transform: translateY(-2px) scale(1.06) rotate(-2deg) !important;
+  box-shadow: 0 8px 32px #a855f744, 0 1.2em 1.8em #f6e05e55 !important;
 }
