@@ -3692,9 +3692,57 @@ button.shopify-payment-button__button--unbranded::after {
     transition: box-shadow 0.18s, background-color 0.18s;
   }
 }
-/* Zoom on hover image */
-
-
+/*Contact Form*/
+#ContactForm {
+  background: #f6e05e !important;
+  color: #f97316 !important;
+  border-radius: 1.5rem !important;
+  box-shadow: 0 4px 18px #a855f733 !important;
+  padding: 2rem 2.5rem !important;
+  margin-bottom: 2rem !important;
+}
+#ContactForm label,
+#ContactForm .field__label,
+#ContactForm .form__label {
+  color: #f97316 !important;
+}
+#ContactForm input,
+#ContactForm textarea,
+#ContactForm select {
+  background: #fffbe8 !important;
+  color: #f97316 !important;
+  border: 1.5px solid #f97316 !important;
+  border-radius: 0.7rem !important;
+  font-size: 1.08em !important;
+  margin-bottom: 1.1rem !important;
+}
+#ContactForm input:focus,
+#ContactForm textarea:focus,
+#ContactForm select:focus {
+  border-color: #a855f7 !important;
+  outline: none !important;
+}
+#ContactForm .button,
+#ContactForm button,
+#ContactForm input[type="submit"] {
+  background: #f97316 !important;
+  color: #fffaf0 !important;
+  border: none !important;
+  border-radius: 0.7rem !important;
+  font-weight: bold !important;
+  padding: 1em 2.2em !important;
+  font-size: 1.13em !important;
+  cursor: pointer !important;
+  margin-top: 1em !important;
+  box-shadow: 0 2px 8px #f6e05e44 !important;
+  transition: background 0.2s, color 0.2s;
+}
+#ContactForm .button:hover,
+#ContactForm button:hover,
+#ContactForm input[type="submit"]:hover {
+  background: #a855f7 !important;
+  color: #fffbe8 !important;
+}
 
 
 
