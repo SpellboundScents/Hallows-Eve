@@ -3735,7 +3735,7 @@ button.shopify-payment-button__button--unbranded::after {
   min-height: 0 !important;
   padding: 0 !important;
   border: none !important;
-  border-radius: 50% 50% 70% 70% / 45% 45% 95% 95% !important;
+  border-radius: 45% 45% 95% 95% / 50% 50% 70% 70% !important;
   position: relative !important;
   background: linear-gradient(
     to bottom,
