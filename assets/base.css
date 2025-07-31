@@ -3726,49 +3726,82 @@ button.shopify-payment-button__button--unbranded::after {
 #ContactForm .contact__button {
   text-align: center !important;
 }
+
+/* Candy corn button container */
 #ContactForm .button[type="submit"] {
+  position: relative !important;
   display: inline-block !important;
   width: 5em !important;
-  height: 5em !important;
-  min-width: 0 !important;
-  min-height: 0 !important;
+  height: 4em !important;
   padding: 0 !important;
   border: none !important;
-  border-radius: 60% 60% 48% 48% / 20% 20% 90% 90% !important; /* narrow top, wide bottom */
-  position: relative !important;
-  background: linear-gradient(
-    to top,
-    #fffaf0 0%,
-    #fffaf0 32%,
-    #f6e05e 32%,
-    #f6e05e 68%,
-    #f97316 68%,
-    #f97316 100%
-  ) !important;
+  background: none !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+  margin: 1em auto 0 auto !important;
+  font-size: 1em !important;
   color: #a855f7 !important;
   font-weight: bold !important;
-  font-size: 1.18em !important;
-  cursor: pointer !important;
-  margin: 0.8em auto 0 auto !important;
-  box-shadow: 0 8px 24px #f6e05e55, 0 2px 8px #a855f733 !important;
-  transition: box-shadow 0.15s, transform 0.13s !important;
-  text-shadow: 0 1px 6px #fff8, 0 0.5px 0 #f97316a0 !important;
+  letter-spacing: 0.05em !important;
+  z-index: 0 !important;
   text-align: center !important;
-  line-height: 4.8em !important;
-  letter-spacing: 0.04em !important;
+  /* Hide background/text for accessibility (text will appear above) */
+  background-color: transparent !important;
 }
 
-#ContactForm .button[type="submit"]:hover {
+/* The candy corn shape as the background */
+#ContactForm .button[type="submit"]::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 5em;
+  height: 4.5em;
   background: linear-gradient(
     to top,
-    #fffbe8 0%,
-    #fffbe8 32%,
-    #fef5ad 32%,
-    #fef5ad 68%,
-    #fd922b 68%,
-    #fd922b 100%
-  ) !important;
-  color: #fffaf0 !important;
-  transform: translateY(-2px) scale(1.06) rotate(-2deg) !important;
-  box-shadow: 0 8px 32px #a855f744, 0 1.2em 1.8em #f6e05e55 !important;
+    #f97316 0%,
+    #f97316 38%,
+    #f6e05e 38%,
+    #f6e05e 75%,
+    #fffaf0 75%,
+    #fffaf0 100%
+  );
+  border-bottom-left-radius: 2.5em 2.2em;
+  border-bottom-right-radius: 2.5em 2.2em;
+  border-top-left-radius: 1em 0.5em;
+  border-top-right-radius: 1em 0.5em;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  z-index: -1;
+  box-shadow: 0 8px 24px #f6e05e55, 0 2px 8px #a855f733;
+}
+
+/* Button label centered over the candy corn */
+#ContactForm .button[type="submit"] span,
+#ContactForm .button[type="submit"] {
+  position: relative !important;
+  z-index: 1 !important;
+  top: 1.6em;
+  display: inline-block;
+  width: 100%;
+  color: #a855f7 !important;
+  text-shadow: 0 1px 6px #fff8, 0 0.5px 0 #f97316a0 !important;
+  font-weight: bold !important;
+}
+
+/* On hover: brighten and wiggle */
+#ContactForm .button[type="submit"]:hover::before {
+  background: linear-gradient(
+    to top,
+    #fd922b 0%,
+    #fd922b 38%,
+    #fef5ad 38%,
+    #fef5ad 75%,
+    #fffbe8 75%,
+    #fffbe8 100%
+  );
+  box-shadow: 0 8px 32px #a855f744, 0 1.2em 1.8em #f6e05e55;
+}
+#ContactForm .button[type="submit"]:hover {
+  transform: translateY(-2px) scale(1.04) rotate(-2deg) !important;
 }
