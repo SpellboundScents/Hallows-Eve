@@ -3734,7 +3734,7 @@ button.shopify-payment-button__button--unbranded::after {
   min-width: 0 !important;
   min-height: 0 !important;
   padding: 0 !important;
-  border: none !important;
+  border: 3px solid #a855f7 !important;   /* Kawaii pastel purple border */  
   border-radius: 50% 50% 70% 70% / 45% 45% 95% 95% !important;
   position: relative !important;
   background: linear-gradient(
@@ -3771,9 +3771,4 @@ button.shopify-payment-button__button--unbranded::after {
   color: #fffaf0 !important;
   transform: translateY(-2px) scale(1.06) rotate(-2deg) !important;
   box-shadow: 0 8px 32px #a855f744, 0 1.2em 1.8em #f6e05e55 !important;
-}
-#ContactForm .button[type="submit"] {
-  /* ... your existing properties ... */
-  border: 3px solid #a855f7 !important;   /* Kawaii pastel purple border */
-  /* ...rest of your code... */
 }
