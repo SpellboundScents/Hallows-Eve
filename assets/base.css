@@ -3727,81 +3727,85 @@ button.shopify-payment-button__button--unbranded::after {
   text-align: center !important;
 }
 
-/* Candy corn button container */
 #ContactForm .button[type="submit"] {
-  position: relative !important;
   display: inline-block !important;
-  width: 5em !important;
-  height: 4em !important;
+  position: relative !important;
+  width: 5.2em !important;
+  height: 5.2em !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
   padding: 0 !important;
-  border: none !important;
   background: none !important;
+  border: none !important;
+  outline: none !important;
   box-shadow: none !important;
   cursor: pointer !important;
-  margin: 1em auto 0 auto !important;
   font-size: 1em !important;
   color: #a855f7 !important;
   font-weight: bold !important;
   letter-spacing: 0.05em !important;
-  z-index: 0 !important;
   text-align: center !important;
-  /* Hide background/text for accessibility (text will appear above) */
-  background-color: transparent !important;
+  vertical-align: middle !important;
+  margin: 1em auto 0 auto !important;
+  /* Remove border and any border-color */
+  border-color: transparent !important;
 }
 
-/* The candy corn shape as the background */
+/* Candy corn triangle shape with rounded bottom */
 #ContactForm .button[type="submit"]::before {
   content: "";
-  display: block;
   position: absolute;
-  top: 0; left: 50%;
+  left: 50%; top: 0;
   transform: translateX(-50%);
-  width: 5em;
-  height: 4.5em;
+  width: 5.2em; height: 5.2em;
   background: linear-gradient(
     to top,
     #f97316 0%,
-    #f97316 38%,
-    #f6e05e 38%,
+    #f97316 37%,
+    #f6e05e 37%,
     #f6e05e 75%,
     #fffaf0 75%,
     #fffaf0 100%
   );
-  border-bottom-left-radius: 2.5em 2.2em;
-  border-bottom-right-radius: 2.5em 2.2em;
-  border-top-left-radius: 1em 0.5em;
-  border-top-right-radius: 1em 0.5em;
-  clip-path: polygon(50% 0, 100% 100%, 0 100%);
-  z-index: -1;
-  box-shadow: 0 8px 24px #f6e05e55, 0 2px 8px #a855f733;
+  /* Kawaii chubby bottom! */
+  border-bottom-left-radius: 2.8em 2.5em;
+  border-bottom-right-radius: 2.8em 2.5em;
+  border-top-left-radius: 1.1em 0.8em;
+  border-top-right-radius: 1.1em 0.8em;
+  clip-path: polygon(50% 6%, 96% 98%, 4% 98%);
+  z-index: 0;
+  box-shadow: 0 4px 22px #f6e05e88, 0 2px 8px #a855f744;
+  border: none;
 }
 
-/* Button label centered over the candy corn */
+/* The text! Use a span for perfect centering, or let button text center itself */
 #ContactForm .button[type="submit"] span,
 #ContactForm .button[type="submit"] {
   position: relative !important;
   z-index: 1 !important;
-  top: 1.6em;
   display: inline-block;
+  top: 2.1em; /* moves label down into the center */
   width: 100%;
   color: #a855f7 !important;
   text-shadow: 0 1px 6px #fff8, 0 0.5px 0 #f97316a0 !important;
   font-weight: bold !important;
+  text-align: center !important;
+  pointer-events: none; /* disables cursor on text, so whole button is clickable */
 }
 
-/* On hover: brighten and wiggle */
 #ContactForm .button[type="submit"]:hover::before {
   background: linear-gradient(
     to top,
     #fd922b 0%,
-    #fd922b 38%,
-    #fef5ad 38%,
+    #fd922b 37%,
+    #fef5ad 37%,
     #fef5ad 75%,
     #fffbe8 75%,
     #fffbe8 100%
   );
-  box-shadow: 0 8px 32px #a855f744, 0 1.2em 1.8em #f6e05e55;
+  box-shadow: 0 10px 34px #a855f744, 0 1.2em 1.8em #f6e05e77;
 }
+
 #ContactForm .button[type="submit"]:hover {
   transform: translateY(-2px) scale(1.04) rotate(-2deg) !important;
 }
