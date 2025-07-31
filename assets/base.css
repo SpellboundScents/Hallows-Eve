@@ -3772,3 +3772,8 @@ button.shopify-payment-button__button--unbranded::after {
   transform: translateY(-2px) scale(1.06) rotate(-2deg) !important;
   box-shadow: 0 8px 32px #a855f744, 0 1.2em 1.8em #f6e05e55 !important;
 }
+#ContactForm .button[type="submit"] {
+  /* ... your existing properties ... */
+  border: 3px solid #a855f7 !important;   /* Kawaii pastel purple border */
+  /* ...rest of your code... */
+}
