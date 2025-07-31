@@ -3697,7 +3697,7 @@ button.shopify-payment-button__button--unbranded::after {
   background: #f6e05e !important;
   color: #f97316 !important;
   border-radius: 1.5rem !important;
-  box-shadow: 0 4px 18px #a855f733 !important;
+  box-shadow: none !important;
   padding: 2rem 2.5rem !important;
   margin-bottom: 2rem !important;
 }
