@@ -3722,21 +3722,6 @@ button.shopify-payment-button__button--unbranded::after {
   border-color: #a855f7 !important;
   outline: none !important;
 }
-#ContactForm .button,
-#ContactForm button,
-#ContactForm input[type="submit"] {
-  background: #f97316 !important;
-  color: #fffaf0 !important;
-  border: none !important;
-  border-radius: 0.7rem !important;
-  font-weight: bold !important;
-  padding: 1em 2.2em !important;
-  font-size: 1.13em !important;
-  cursor: pointer !important;
-  margin-top: 1em !important;
-  box-shadow: 0 2px 8px #f6e05e44 !important;
-  transition: background 0.2s, color 0.2s;
-}
 /* Candy Corn Button */
 #ContactForm .button,
 #ContactForm button,
