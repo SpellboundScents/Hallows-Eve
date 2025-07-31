@@ -3751,7 +3751,20 @@ button.shopify-payment-button__button--unbranded::after {
   font-size: 1.18em !important;
   cursor: pointer !important;
   margin: 0.8em auto 0 auto !important;
-  box-shadow: 0 8px 24px #f6e05e55, 0 2px 8px #a855f733 !important;
+  outline: none !important;
+  box-shadow: none !important;
+  /* This targets *all* border styles, in case the theme uses a custom property: */
+  border-style: solid !important;
+  border-width: 3px !important;
+  border-color: #a855f7 !important;
+}
+
+#ContactForm .button[type="submit"]:focus,
+#ContactForm .button[type="submit"]:active {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: #a855f7 !important;
+}
   transition: box-shadow 0.15s, transform 0.13s !important;
   text-shadow: 0 1px 6px #fff8, 0 0.5px 0 #f97316a0 !important;
   text-align: center !important;
@@ -3771,20 +3784,4 @@ button.shopify-payment-button__button--unbranded::after {
   color: #fffaf0 !important;
   transform: translateY(-2px) scale(1.06) rotate(-2deg) !important;
   box-shadow: 0 8px 32px #a855f744, 0 1.2em 1.8em #f6e05e55 !important;
-}
-#ContactForm .button[type="submit"] {
-  /* ...all your code... */
-  outline: none !important;
-  box-shadow: none !important;
-  /* This targets *all* border styles, in case the theme uses a custom property: */
-  border-style: solid !important;
-  border-width: 3px !important;
-  border-color: #a855f7 !important;
-}
-
-#ContactForm .button[type="submit"]:focus,
-#ContactForm .button[type="submit"]:active {
-  outline: none !important;
-  box-shadow: none !important;
-  border-color: #a855f7 !important;
 }
