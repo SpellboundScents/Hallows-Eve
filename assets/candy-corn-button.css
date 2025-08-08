@@ -1,55 +1,23 @@
-/* Candy Corn Send Button — contact page only */
-:root{
-  --corn-white:#ffffff;
-  --corn-yellow:#ffaf0f;
-  --corn-orange:#ff4f2f;
-}
-
-/* Scope tightly so other buttons aren't touched */
-.page-contact #ContactForm .button[type="submit"],
-.page-contact #ContactForm button[type="submit"],
-.page-contact #ContactForm input[type="submit"]{
+\/* Candy Corn Send Button – scoped to this section instance */
+#shopify-section-{{ section.id }} #ContactForm [type="submit"]{
   display:inline-flex !important;
-  align-items:center;
-  justify-content:center;
-  gap:.4ch;
-  min-width:7.5rem;       /* adjust size here */
-  height:3.6rem;
-  padding:0 .9rem !important;
-  font-weight:700;
-  font-size:1.05rem;
-  line-height:1;
-  border:0 !important;
-  cursor:pointer;
-  text-decoration:none;
-  color:var(--corn-orange);
-  /* candy corn silhouette */
+  align-items:center; justify-content:center;
+  min-width:7.5rem; height:3.6rem; padding:0 .9rem !important;
+  font-weight:700; font-size:1.05rem; line-height:1;
+  border:0 !important; cursor:pointer; text-decoration:none;
+  color:#ff4f2f;
   border-radius:50% 50% 70% 70% / 45% 45% 95% 95%;
-  /* upright gradient (white→yellow→orange, TOP→BOTTOM) */
-  background:
-    linear-gradient(to bottom,
-      var(--corn-white) 0 30%,
-      var(--corn-yellow) 30% 65%,
-      var(--corn-orange) 65% 100%);
-  box-shadow:
-    0 10px 24px rgba(255,175,15,.25),
-    0 0 0 3px rgba(255,175,15,.15) inset;
+  background:linear-gradient(to bottom,#fff 0 30%,#ffaf0f 30% 65%,#ff4f2f 65% 100%);
+  box-shadow:0 10px 24px rgba(255,175,15,.25),0 0 0 3px rgba(255,175,15,.15) inset;
   transition:transform .15s ease, box-shadow .15s ease, filter .15s ease;
 }
-
-.page-contact #ContactForm [type="submit"]:hover{
+#shopify-section-{{ section.id }} #ContactForm [type="submit"]:hover{
   transform:translateY(-1px) scale(1.03);
-  box-shadow:
-    0 14px 28px rgba(255,175,15,.35),
-    0 0 0 3px rgba(255,175,15,.22) inset;
+  box-shadow:0 14px 28px rgba(255,175,15,.35),0 0 0 3px rgba(255,175,15,.22) inset;
 }
-
-.page-contact #ContactForm [type="submit"]:active{
-  transform:translateY(0) scale(.99);
-  filter:saturate(1.05);
+#shopify-section-{{ section.id }} #ContactForm [type="submit"]:active{
+  transform:translateY(0) scale(.99); filter:saturate(1.05);
 }
-
-/* Respect reduced motion */
 @media (prefers-reduced-motion: reduce){
-  .page-contact #ContactForm [type="submit"]{ transition:none; }
+  #shopify-section-{{ section.id }} #ContactForm [type="submit"]{transition:none;}
 }
