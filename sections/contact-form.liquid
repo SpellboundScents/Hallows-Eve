@@ -181,6 +181,54 @@
   }
 {% endstyle %}
 
+{% style %}
+/* —— Contact form inputs: remove Dawn's extra box layer —— */
+#shopify-section-{{ section.id }} .field,
+#shopify-section-{{ section.id }} .text-area {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Dawn draws extra rounded boxes with ::before/::after — kill them */
+#shopify-section-{{ section.id }} .field::before,
+#shopify-section-{{ section.id }} .field::after {
+  content: none !important;
+}
+
+/* Actual inputs/textarea */
+#shopify-section-{{ section.id }} .field__input,
+#shopify-section-{{ section.id }} textarea {
+  background: transparent !important;     /* no inner white card */
+  border: 2px solid #ffaf0f !important;   /* your single border */
+  border-radius: 10px !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 0.9rem 1rem !important;
+  color: inherit !important;
+}
+
+/* Focus state (optional glow; tweak as you like) */
+#shopify-section-{{ section.id }} .field__input:focus,
+#shopify-section-{{ section.id }} textarea:focus {
+  box-shadow: 0 0 0 3px rgba(255,175,15,.25) inset !important;
+}
+
+/* Remove Dawn’s input focus rings/outline helpers */
+#shopify-section-{{ section.id }} .field__input:focus-visible {
+  outline: none !important;
+}
+
+/* Tame Chrome autofill yellow so it doesn't bring back a white box */
+#shopify-section-{{ section.id }} input:-webkit-autofill,
+#shopify-section-{{ section.id }} input:-webkit-autofill:hover,
+#shopify-section-{{ section.id }} input:-webkit-autofill:focus,
+#shopify-section-{{ section.id }} textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: inherit !important;
+}
+{% endstyle %}
+
 
 {% schema %}
 {
