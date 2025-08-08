@@ -7,6 +7,6 @@
     <!-- Middle line (yellow) -->
     <path d="M20 12L4 12" stroke="#FFAF0F" stroke-width="1.5" stroke-linecap="round"></path>
     <!-- Bottom line (orange) -->
-    <path d="M20 17L4 17" stroke="#FF4F2F" stroke-width="1.5" stroke-linecap="round"></path>
+    <path d="M20 17L4 17" stroke="#FF7518" stroke-width="1.5" stroke-linecap="round"></path>
   </g>
 </svg>
