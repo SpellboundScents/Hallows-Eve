@@ -229,6 +229,14 @@
 }
 {% endstyle %}
 
+{% style %}
+/* Force black text inside inputs and textarea */
+#shopify-section-{{ section.id }} .field__input,
+#shopify-section-{{ section.id }} textarea {
+  color: #000 !important;
+}
+
+{% endstyle %}
 
 {% schema %}
 {
