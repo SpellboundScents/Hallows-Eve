@@ -136,6 +136,51 @@
 </div>
 
 {{ 'candy-corn-button.css.liquid' | asset_url | stylesheet_tag }}
+{%- comment -%} Candy Corn button — loaded at end so it overrides base styles {%- endcomment -%}
+{{ 'candy-corn-button.css' | asset_url | stylesheet_tag }}
+{% style %}
+  /* Works whether it's <input> or <button>, and for ContactForm-### ids */
+  #shopify-section-{{ section.id }} form[id^="ContactForm"] [type="submit"],
+  #shopify-section-{{ section.id }} form[id^="ContactForm"] .button[type="submit"],
+  #shopify-section-{{ section.id }} form[id^="ContactForm"] button[type="submit"] {
+    display:inline-flex !important;
+    align-items:center; justify-content:center;
+    min-width:7.5rem; height:3.6rem; padding:0 .9rem !important;
+    font-weight:700; font-size:1.05rem; line-height:1;
+    border:0 !important; cursor:pointer; text-decoration:none;
+    color:#ff4f2f;
+
+    /* reset default Dawn button skin */
+    background:none !important; box-shadow:none; appearance:none;
+
+    /* candy corn silhouette */
+    border-radius:50% 50% 70% 70% / 45% 45% 95% 95%;
+
+    /* upright stripes (white → yellow → orange) */
+    background:linear-gradient(to bottom,#fff 0 30%,#ffaf0f 30% 65%,#ff4f2f 65% 100%) !important;
+
+    /* glow */
+    box-shadow:0 10px 24px rgba(255,175,15,.25),
+               0 0 0 3px rgba(255,175,15,.15) inset !important;
+
+    transition:transform .15s ease, box-shadow .15s ease, filter .15s ease;
+  }
+
+  #shopify-section-{{ section.id }} form[id^="ContactForm"] [type="submit"]:hover{
+    transform:translateY(-1px) scale(1.03);
+    box-shadow:0 14px 28px rgba(255,175,15,.35),
+               0 0 0 3px rgba(255,175,15,.22) inset !important;
+  }
+  #shopify-section-{{ section.id }} form[id^="ContactForm"] [type="submit"]:active{
+    transform:translateY(0) scale(.99); filter:saturate(1.05);
+  }
+
+  /* respect reduced motion */
+  @media (prefers-reduced-motion: reduce){
+    #shopify-section-{{ section.id }} form[id^="ContactForm"] [type="submit"]{ transition:none; }
+  }
+{% endstyle %}
+
 
 {% schema %}
 {
