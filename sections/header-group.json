@@ -69,6 +69,11 @@
     },
     "header": {
       "type": "header",
+      "custom_css": [
+        "/* Round + smaller glow for header icons & logo */.header__icon,.header__icon svg,.header__icon a,.header__heading a {border-radius: 50% !important; /* perfectly round hitbox */}",
+        ".header__icon:hover,.header__icon a:hover,.header__heading a:hover {}",
+        "/* Explicitly keep hamburger menu original */.header__icon--menu,.header__icon--menu:hover,.header__icon--menu svg,.header__icon--menu a {border-radius: 0 !important; box-shadow: none !important;}"
+      ],
       "settings": {
         "logo_position": "middle-center",
         "mobile_logo_position": "center",
