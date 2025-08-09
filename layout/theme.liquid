@@ -22,8 +22,14 @@
       {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
     </title>
 
+    {%- comment -%} Default meta description {%- endcomment -%}
     {% if page_description %}
       <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
+    {%- comment -%} Override for /products page {%- endcomment -%}
+    {% if request.path == '/products' %}
+    <meta name="description" content="Browse all kawaii Halloween wax melts by Spellbound Scents Wax Co.—cute, spooky, and hand-poured in small batches.">
     {% endif %}
 
     {% render 'meta-tags' %}
@@ -296,11 +302,6 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-    
-    {% if request.path == '/products' %}
-  <meta name="description" content="Browse all kawaii Halloween wax melts by Spellbound Scents Wax Co.—cute, spooky, and hand-poured in small batches.">
-{% endif %}
-
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
