@@ -92,5 +92,7 @@ Please retain the original Dawn license attribution if redistributing.
 
 ## 📬 Contact
 For Spellbound Scents Wax Co.:
+
 🌐 Website: spellboundscentswax.com
+
 📧 Email: inbox@spellboundscentswax.com
