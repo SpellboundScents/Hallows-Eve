@@ -63,6 +63,7 @@
     },
     "page_MBAXhe": {
       "type": "page",
+      "disabled": true,
       "custom_css": [
         "img {border: 2px solid #f6e05e; /* candy corn yellow */ border-radius: 2rem; box-shadow: 0 0 8px 2px #a855f733; /* subtle purple accent */ transition: box-shadow 0.4s, border-color 0.3s;}",
         "img:hover {border: 2px solid #f97316; /* orange border on hover */ box-shadow: 0 0 20px 6px #a855f788; /* slightly more glow */}"
@@ -78,7 +79,6 @@
     },
     "page_A3brBR": {
       "type": "page",
-      "disabled": true,
       "custom_css": [
         "img {border: 2px solid #f6e05e; /* candy corn yellow */ border-radius: 2rem; box-shadow: 0 0 8px 2px #ffd66b; /* subtle yellow accent */ transition: box-shadow 0.4s, border-color 0.3s;}",
         "img:hover {border: 3px solid #f6e05e; /* yellow border on hover */ box-shadow: 0 0 30px 10px #f59e0b; /* slightly more glow */}"
