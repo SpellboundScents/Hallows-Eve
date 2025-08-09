@@ -67,7 +67,7 @@
         "img {border: 2px solid #f6e05e; /* candy corn yellow */ border-radius: 2rem; box-shadow: 0 0 8px 2px #a855f733; /* subtle purple accent */ transition: box-shadow 0.4s, border-color 0.3s;}",
         "img:hover {border: 2px solid #f97316; /* orange border on hover */ box-shadow: 0 0 20px 6px #a855f788; /* slightly more glow */}"
       ],
-      "name": "t:sections.page.presets.name",
+      "name": "RTS Announcement",
       "settings": {
         "page": "next-rts",
         "heading_size": "h2",
@@ -83,7 +83,7 @@
         "img {border: 2px solid #f6e05e; /* candy corn yellow */ border-radius: 2rem; box-shadow: 0 0 8px 2px #ffd66b; /* subtle yellow accent */ transition: box-shadow 0.4s, border-color 0.3s;}",
         "img:hover {border: 3px solid #f6e05e; /* yellow border on hover */ box-shadow: 0 0 30px 10px #f59e0b; /* slightly more glow */}"
       ],
-      "name": "t:sections.page.presets.name",
+      "name": "RTS is HERE",
       "settings": {
         "page": "august-rts",
         "heading_size": "h1",
@@ -94,9 +94,9 @@
     },
     "featured_collection_kKYryj": {
       "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
+      "name": "Current RTS",
       "settings": {
-        "collection": "july-2025-restock",
+        "collection": "august-2025-rts",
         "products_to_show": 4,
         "title": "This Month's RTS",
         "heading_size": "h2",
