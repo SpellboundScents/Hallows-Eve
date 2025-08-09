@@ -1,151 +1,122 @@
-# Contributing
+# Contributing to Hallows Eve (Spellbound Scents’ Dawn Fork)
 
-[Before contributing](#before-contributing) |
-[Scope](#scope) |
-[Theme code principles](#theme-code-principles) |
-[Contributing code](#contributing-code) |
-[Reporting a bug](#reporting-a-bug) |
-[Reviewing](#reviewing)
+First off, thank you for your interest in contributing! 🎃  
+**Hallows Eve** is a customized fork of Shopify’s [Dawn](https://github.com/Shopify/dawn) theme for **Spellbound Scents Wax Co.** with a kawaii/cute Halloween aesthetic. We welcome fixes, improvements, and documentation updates that keep the theme fast, accessible, and spooky-sweet year‑round.
 
-We're really glad you're reading this, because we would love to have more developers contribute to this theme! If you're passionate about building for the next million entrepreneurs, you're in the right place.
+> 💡 **Scope:** This repo is a Dawn fork primarily tailored to Spellbound Scents. External contributions are welcome if they:
+> - Improve performance, accessibility, or code quality
+> - Fix bugs and visual inconsistencies
+> - Add general-purpose options that can be toggled in theme settings
+> - Refine our Kawaii Halloween visual system without breaking brand consistency
 
-## Before contributing
+---
 
-If you encounter a bug or think of a useful feature for Dawn, please [create a new issue](https://github.com/Shopify/dawn/issues/new). Creating an issue before jumping into code ensures we can discuss it and determine whether it aligns with the direction of the theme.
+## Code of Conduct
 
-If you want to contribute to the theme, regardless of whether it's a small bug fix or correcting a typo, please feel free to do so. Any help goes a long way! Also, contributions aren't necessarily all code related. Other contributions can be in the form of issues, pull requests, discussions, etc.
+By participating, you agree to uphold our [Code of Conduct](./CODE_OF_CONDUCT.md). Be kind, be respectful, and bring good vibes.
 
-## Scope
+---
 
-This Github repository exists for the theme development community to discuss and solve problems directly related to Dawn. It **is not the place** to discuss general theme development problems, nor the place to seek help for non-Dawn related problems.
+## How to Contribute
 
-Shopify theme development is a big topic and it's completely normal that you will encounter problems which might require you to reach out for help. In fact, we provide several knowledge and support platforms for theme development already:
+### 1) Discuss first (issues)
+- Open an issue describing the change (bug, enhancement, or documentation).
+- Include reproduction steps or screenshots for UI issues.
+- Tag it with an appropriate label (e.g., `bug`, `enhancement`, `docs`).
 
-* [Shopify Development](https://shopify.dev/themes)
-* [Shopify Help Center](https://help.shopify.com/themes)
-* [Shopify Forum](https://ecommerce.shopify.com/forums)
-* [Shopify Experts](https://experts.shopify.com/)
+### 2) Fork & branch
+- Fork the repo and create a branch:
+  - `fix/header-icon-alignment`
+  - `feat/theme-settings-candy-corn-button`
+  - `docs/readme-license-badge`
 
-## Theme code principles
+### 3) Dev environment
+- You’ll need:
+  - Node 18+ (LTS recommended)
+  - Shopify CLI
+  - Theme Check
+  - Prettier
 
-Before contributing to Dawn, please read the following theme code principles to better understand our fundamental approach to theme development. The expectation is that you follow these principles as you build for Dawn.
+```bash
+# install dependencies if applicable
+npm install
 
-### Why these principles?
+# run theme check (Liquid, JSON, etc.)
+npx @shopify/theme-check
 
-Browsers provide APIs to solve many problems: from [WebGL](https://en.wikipedia.org/wiki/WebGL) and [WASM](https://en.wikipedia.org/wiki/WebAssembly)-powered apps to static websites. The best APIs to use depends on the thing you’re building. Themes power ecommerce websites. In most cases, _Web-native_—making the most of the built-in features of browsers: HTTP, HTML, CSS, JavaScript, and the DOM—is a perfect fit for ecommerce websites. Ecommerce needs incredibly fast websites for mostly “logged out” traffic.
-
-### Web-native in its purest form
-
-_The most important principle._
-
-Themes run on the [evergreen Web](https://www.w3.org/2001/tag/doc/evergreen-web/). We leverage the latest web browsers to their fullest, while maintaining support for the older ones through progressive enhancement—not polyfills.
-
-We write bespoke Web-native code with no abstractions. Frameworks, libraries, and dependencies don’t belong in our themes.
-
-We engage with the browser ecosystem on behalf of our merchants to make Web-native ecommerce the best it can be.
-
-“Don’t repeat yourself” is an anti-pattern. We do our utmost best to do more with less, but we don’t build abstractions around repetition. Instead, we use linting and testing to enforce consistently-good and up-to-date Web-native code.
-
-### Lean, fast, and reliable
-
-_The principle requirement._
-
-Code must be lean, fast, and reliable. Our targets include:
-
-* Zero [Cumulative Layout Shift](https://web.dev/cls/)
-* No DOM manipulation before user input
-* No render-blocking JavaScript
-* No [long tasks](https://developer.mozilla.org/en-US/docs/Web/API/Long_Tasks_API)
-
-Functionality and design defaults to “no” until it meets this requirement. Code ships on quality.
-
-We relentlessly and continuously optimize code within the constraint of being Web-native. If ever there is a feature that browsers have not made fast yet, we either don’t use it, or use it “as is” if it is fast enough. We trust that browsers will get faster over time.
-
-Themes must be built with purpose. They shouldn’t support each and every feature in Shopify.
-
-### Server-rendered
-
-_Our main constraint._
-
-HTML must be rendered by Shopify servers using [Liquid](https://shopify.dev/api/liquid). Business logic and platform primitives such as translations and money formatting don’t belong on the client.
-
-Server-rendered doesn’t imply “full page reload”. Async and on-demand rendering of parts of the page is OK, but we do it sparingly as a progressive enhancement.
-
-### Functional, not pixel-perfect
-
-_No buyer is left behind._
-
-The Web doesn’t require each page to be rendered pixel-perfect by each browser engine. Using semantic markup, progressive enhancement, and clever design, we ensure that themes remain functional regardless of the browser.
-
-And since legacy browsers are often the slowest, we don’t burden them with polyfills. We rely instead on the fail-open nature of the Web to provide them with a “minimal but functional” experience.
-
-## Contributing code
-
-You can follow these steps to go from setting up a store to creating a pull request for Dawn.
-
->:information_source: We'll assume you're already set up with Git and GitHub (if you're not familiar with these, [start with these docs](https://docs.github.com/github/getting-started-with-github/quickstart/set-up-git)).
-
-1. Set up a [development store](https://shopify.dev/themes/tools/development-stores) so you can test your code changes (assuming you don't already have a store).
-2. Install the [Shopify CLI](https://github.com/Shopify/shopify-cli) by following [these steps](https://shopify.dev/themes/tools/cli/installation).
-3. Fork the repository, clone it and create a new branch:
-```sh
-git clone git@github.com:your-username/dawn.git
-cd dawn
-git checkout -b your-new-branch-name
+# format code
+npx prettier --write .
 ```
-4. Launch a development server:
-```sh
-shopify theme serve
+
+Optional but recommended for previewing:
+```bash
+# login and serve to a dev store
+shopify login --store <your-store>.myshopify.com
+shopify theme dev
 ```
-5. Add your changes to the codebase.
-6. Commit your changes:
-```sh
-git commit -a -m="Your commit message"
-```
-7. Push your commit to your forked repository:
-```sh
-git push origin your-new-branch-name
-```
-8. Open a pull request. See [GitHub's official documentation](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) for more details.
-9. Before you can merge your pull request, you must sign Shopify's [Contributor License Agreement (CLA)](https://cla.shopify.com/).
 
-## Reporting a bug
+### 4) Style & conventions
+# General
 
-Bugs are tracked as [GitHub issues](https://github.com/Shopify/dawn/issues). Search open issues to see if someone else has reported a similar bug. If it's something new, [open an issue](https://github.com/Shopify/dawn/issues/new). We'll use the issue to have a conversation about the problem you want to fix.
+- Keep PRs focused and small. One feature or fix per PR.
+- Include before/after screenshots or GIFs for UI changes.
+- Update documentation (README, comments, or settings schema) if behavior changes.
 
-When creating a new issue, please ensure the issue is clear and include additional details to help maintainers reproduce it:
+# Liquid
 
-* **Use a clear and descriptive title** for the issue to identify the problem.
-* **Describe the exact steps which reproduce the problem** in as many details as possible.
-* **Provide specific examples to demonstrate the steps.** Include links to files, or copy/pasteable snippets. If you're providing snippets in the issue, use Markdown code blocks.
-* **Describe the behavior you observed** after following the steps and point out what exactly is the problem with that behavior.
-* **Explain which behavior you expected to see** instead and why.
-* **Include screenshots and animated GIFs** where possible.
+- Prefer settings-driven changes over hard-coded values.
+- Maintain accessibility (semantic HTML, ARIA where needed).
+- Keep translation strings in /locales.
 
-## Reviewing
+# CSS
 
-We (the Themes team) review every single PR. The purpose of reviews is to create the best version of Dawn we can for merchants, developers, and others who use it.
+- Prefer utility-like, minimal CSS. Avoid heavy overrides.
+- Respect the candy corn palette and Kawaii Halloween aesthetic.
+- Reuse existing variables/tokens if available.
 
-:yellow_heart: Reviews are always respectful, acknowledging that everyone did the best possible job with the knowledge they had at the time.
-:yellow_heart: Reviews discuss content, not the person who created it.
-:yellow_heart: Reviews are constructive and start conversation around feedback.
+# JavaScript
 
-### Self review
+- Avoid large dependencies; stick to Dawn’s lightweight approach.
+- Progressive enhancement: don’t break core functionality without JS.
+  
+# Commit messages
 
-You should always review your own PR first.
+- Use conventional-style messages when possible:
+  - fix: correct cart icon stroke width on mobile
+  - feat: add setting to toggle candy-corn CTA style
+  - docs: add MIT + Dawn attribution to README
 
-For code changes, make sure that you:
-- [ ] Confirm that the changes meet our [theme code principles](#theme-code-principles).
-- [ ] Check new or updated Liquid docs to confirm that the code used is up to date and isn't deprecated.
-- [ ] If there are any failing checks in your PR, troubleshoot them until they're all passing.
-- [ ] Add @Shopify/themes-front-end-developers as a reviewer.
+### 5) Tests & checks
+- Run Theme Check and Prettier before pushing.
+- Manually test:
+  - Header icons (cart/search/account)
+  - Buttons/CTAs (hover/focus states)
+  - Product cards, PDP, and Collections
+  - Mobile responsiveness
+  - Contrast and focus visibility
+    
+### Pull Request Checklist
+ - Issue created/linked describing the change
+ - Small, focused PR (screenshots for UI)
+ - No breaking changes to existing settings unless documented and migrated
+ - @shopify/theme-check passes
+ - prettier --write . run
+ - README / settings schema updated if needed
 
-### Pull request template
+### Design Guidelines (Hallows Eve)
+- Aesthetic: Kawaii/Cute Halloween; playful but readable; year‑round “Halloween anytime.”
+- Palette: Candy corn (warm white #fffaf0, pumpkin/orange, golden yellow), plus neutral darks for contrast.
+- Icons: Rounded, friendly shapes; avoid harsh edges.
+- Accessibility: Maintain WCAG AA contrast and visible focus states.
+- Performance: Keep it lean—prefer CSS over JS; remove unused assets.
 
-When you open a pull request, you must fill out the "Ready for review" template before we can review your PR. This template helps reviewers understand your changes and the purpose of your pull request.
+### Security & Reporting
+## If you discover a security issue, do not open a public issue. Email us at inbox@spellboundscentswax.com with details. We’ll respond as soon as possible.
 
-### Suggested changes
+### License & Attribution
+Contributions are licensed under the repository’s MIT License.
+This project is a modified version of Shopify’s Dawn theme (also MIT). Portions of the code are © Shopify Inc. and Dawn contributors.
 
-We may ask for changes to be made before a PR can be merged, either using [suggested changes](https://docs.github.com/github/collaborating-with-issues-and-pull-requests/incorporating-feedback-in-your-pull-request) or pull request comments. You can apply suggested changes directly through the UI. You can make any other changes in your fork, then commit them to your branch.
-
-As you update your PR and apply changes, mark each conversation as [resolved](https://docs.github.com/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request#resolving-conversations).
+Thank You
+Your help keeps Hallows Eve fast, accessible, and adorable.
+From our cauldron to yours: thanks for contributing! 🧪✨
