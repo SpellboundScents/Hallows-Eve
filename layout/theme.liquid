@@ -296,6 +296,11 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+    
+    {% if request.path == '/products' %}
+  <meta name="description" content="Browse all kawaii Halloween wax melts by Spellbound Scents Wax Co.—cute, spooky, and hand-poured in small batches.">
+{% endif %}
+
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
