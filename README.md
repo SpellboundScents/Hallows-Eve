@@ -85,7 +85,8 @@ For original Dawn documentation, see the Shopify Dawn repository.
 ---
 
 ## 📜 License
-This theme is licensed under the MIT License, but note that Shopify’s Dawn theme is also MIT licensed.
+This theme is a modified version of the [Dawn theme](https://github.com/Shopify/dawn) by Shopify Inc.,  
+which is also licensed under the MIT License. Portions of this code are © Shopify Inc. and other Dawn contributors
 Please retain the original Dawn license attribution if redistributing.
 
 ---
