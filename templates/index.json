@@ -76,6 +76,22 @@
         "padding_bottom": 36
       }
     },
+    "page_A3brBR": {
+      "type": "page",
+      "disabled": true,
+      "custom_css": [
+        "img {border: 2px solid #f6e05e; /* candy corn yellow */ border-radius: 2rem; box-shadow: 0 0 8px 2px #ffd66b; /* subtle yellow accent */ transition: box-shadow 0.4s, border-color 0.3s;}",
+        "img:hover {border: 3px solid #f6e05e; /* yellow border on hover */ box-shadow: 0 0 30px 10px #f59e0b; /* slightly more glow */}"
+      ],
+      "name": "t:sections.page.presets.name",
+      "settings": {
+        "page": "august-rts",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "featured_collection_kKYryj": {
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
@@ -150,6 +166,7 @@
   "order": [
     "image_banner_QQDhCe",
     "page_MBAXhe",
+    "page_A3brBR",
     "featured_collection_kKYryj",
     "collection_list_n4Dbx6"
   ]
