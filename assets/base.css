@@ -3796,3 +3796,14 @@ button.shopify-payment-button__button--unbranded::after {
     max-height: 800px; /* tall enough for 4+ wallets */
     opacity: 1;
   }
+  /* Desktop+Mobile – works in modern browsers (Chrome, Edge, Safari, Firefox ≥121) */
+.cart-hold-order .hold-description{
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height .35s ease, opacity .25s ease;
+}
+.cart-hold-order:has(#hold-order-checkbox:checked) .hold-description{
+  max-height: 200px;
+  opacity: 1;
+}
