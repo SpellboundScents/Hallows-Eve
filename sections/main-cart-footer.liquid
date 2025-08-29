@@ -118,7 +118,7 @@
                   <span>🕒 Hold this order for up to <strong>14 days</strong>.</span>
                 </label>
 
-                <div class="hold-description" style="display:none;font-size:1.1rem;opacity:.85;margin-top:.6rem;">
+                <div class="hold-description" style="font-size:1.1rem;opacity:.85;margin-top:.6rem;">
                   Use discount code "COMBINE" on your next order to have shipping manually combined. The difference will be refunded.
                 </div>
               </div>
@@ -182,28 +182,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // if going back to checkout, don't close
     if (!checkoutBtn.contains(e.relatedTarget)) closeWallets();
   });
-});
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', function(){
-  var footer = document.getElementById('main-cart-footer');
-  if(!footer) return;
-
-  var box = footer.querySelector('.cart-hold-order');
-  var cb  = box && box.querySelector('input[name="attributes[Hold Order]"]');
-
-  function sync(){
-    if(!box || !cb) return;
-    box.classList.toggle('is-checked', cb.checked);
-  }
-
-  // Set initial state from server-rendered "checked"
-  sync();
-
-  // Update on change
-  if(cb){
-    cb.addEventListener('change', sync);
-  }
 });
 </script>
 {% schema %}
