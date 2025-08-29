@@ -184,6 +184,28 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var footer = document.getElementById('main-cart-footer');
+  if(!footer) return;
+
+  var box = footer.querySelector('.cart-hold-order');
+  var cb  = box && box.querySelector('input[name="attributes[Hold Order]"]');
+
+  function sync(){
+    if(!box || !cb) return;
+    box.classList.toggle('is-checked', cb.checked);
+  }
+
+  // Set initial state from server-rendered "checked"
+  sync();
+
+  // Update on change
+  if(cb){
+    cb.addEventListener('change', sync);
+  }
+});
+</script>
 {% schema %}
 {
   "name": "t:sections.main-cart-footer.name",
