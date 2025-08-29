@@ -108,11 +108,19 @@
             "text": "CHECKOUT TEMPORARILY DISABLED",
             "link": ""
           }
+        },
+        "announcement_6Pnnam": {
+          "type": "announcement",
+          "settings": {
+            "text": "FEEL FREE TO CONTINUE TO USE THE SITE. SOME BUTTONS MAY NOT WORK.",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "announcement_GDKeaz",
-        "announcement_LnMGJU"
+        "announcement_LnMGJU",
+        "announcement_6Pnnam"
       ],
       "settings": {
         "auto_rotate": true,
