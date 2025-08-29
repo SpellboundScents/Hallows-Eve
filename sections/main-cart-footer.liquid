@@ -163,13 +163,7 @@
                 </div>
               </div>
 
- <div class="cart__ctas" 
-{{ block.shopify_attributes }}
-  style="display:flex;gap:1rem;align-items:stretch;flex-wrap:wrap;">
-  
-  <!-- Left checkout button-->
-  <div class="cart__cta-left"
-  style="flex:1 1 50%;min-width:280px;">
+ <div class="cart__ctas"  {{ block.shopify_attributes }}  >
                 <button
                   type="submit"
                   id="checkout"
@@ -186,8 +180,6 @@
              
               {%- if additional_checkout_buttons -%}
                   <!-- Right: Wallets 2×2 -->
-                <div class="cart__cta-right cart__dynamic-checkout-buttons additional-checkout-buttons wallet-grid"
-                    style="flex:1 1 50%;min-width:280px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;margin:0;">
                   {{ content_for_additional_checkout_buttons}}
                 </div>
               {%- endif -%}
