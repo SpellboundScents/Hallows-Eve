@@ -3796,7 +3796,3 @@ button.shopify-payment-button__button--unbranded::after {
     max-height: 800px; /* tall enough for 4+ wallets */
     opacity: 1;
   }
-  /* Show description only when checkbox is checked */
-#hold-order-checkbox:checked ~ .hold-description {
-  display: block;
-}
