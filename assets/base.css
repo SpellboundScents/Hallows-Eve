@@ -3801,7 +3801,7 @@ button.shopify-payment-button__button--unbranded::after {
   #main-cart-footer .additional-checkout-buttons button,
   #main-cart-footer .additional-checkout-buttons .shopify-payment-button__button,
   #main-cart-footer .additional-checkout-buttons .shopify-payment-button__button--unbranded{
-    border-radius: 12px !important;
-    overflow: hidden;
+    border-radius: 18px !important;
+    overflow: hidden !important;
   }
 }
