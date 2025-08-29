@@ -3784,53 +3784,6 @@ button.shopify-payment-button__button--unbranded::after {
 }
 /*Checkout Buttons*/
 
-/* Layout the footer as a centered 2-column grid */
-#main-cart-footer .cart__ctas{
-  display:grid;
-  grid-template-columns: minmax(280px, 420px) minmax(280px, 420px);
-  justify-content:center;          /* keeps the whole block centered */
-  gap: 1rem;
-  align-items: stretch;
-}
-
-/* Left column: normal checkout button fills its column */
-#main-cart-footer #checkout{ width:100%; }
-
-/* Right column: keep a sane max width and center it in its column */
-#main-cart-footer .additional-checkout-buttons{
-  max-width:420px;                 /* not huge */
-  width:100%;
-  margin:0 auto !important;        /* re-center within the column */
-}
-
-/* Inside the right column, make the wallets a 2×2 grid */
-#main-cart-footer .wallet-grid{
-  display:grid !important;
-  grid-template-columns: repeat(2, minmax(0,1fr));
-  gap:.75rem;
-}
-
-/* Neutralize SDK hard widths so they fit the grid cells */
-#main-cart-footer .wallet-grid > *,
-#main-cart-footer .wallet-grid button,
-#main-cart-footer .wallet-grid form,
-#main-cart-footer .wallet-grid iframe,
-#main-cart-footer .wallet-grid .shopify-payment-button,
-#main-cart-footer .wallet-grid .shopify-payment-button__button,
-#main-cart-footer .wallet-grid .shopify-payment-button__button--unbranded{
-  width:100% !important;
-  max-width:none !important;
-}
-
-/* Mobile: stack into one column */
-@media (max-width: 749px){
-  #main-cart-footer .cart__ctas{
-    grid-template-columns: 1fr;
-    justify-content: stretch;
-  }
-  #main-cart-footer .additional-checkout-buttons{ max-width:none; margin:0 !important; }
-  #main-cart-footer .wallet-grid{ grid-template-columns: 1fr; }
-}
 /* --- Cart wallet buttons: force 2×2 grid on desktop --- */
 @media (min-width: 750px){
   /* The container that holds the accelerated buttons */
