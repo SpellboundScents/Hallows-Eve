@@ -3784,56 +3784,6 @@ button.shopify-payment-button__button--unbranded::after {
 }
 /*Checkout Buttons*/
 
-/* Put Checkout (left) and Wallets (right) side-by-side on desktop */
-.cart__ctas{
-  display:flex;
-  gap:1rem;
-  align-items:stretch;
-  flex-wrap:wrap;        /* lets it stack on small screens */
-}
-
-/* Make each side take half on desktop */
-.cart__ctas #checkout{
-  flex:1 1 50%;
-}
-.cart__ctas .additional-checkout-buttons{
-  flex:1 1 50%;
-}
-
-/* Kill Dawn’s narrow column + centering */
-.cart__ctas .additional-checkout-buttons{
-  margin:0 !important;
-  max-width:none !important;
-  width:100% !important;
-}
-
-/* 2×2 grid for the wallet buttons */
-.wallet-grid{
-  display:grid !important;
-  grid-template-columns: repeat(2, minmax(0,1fr));
-  gap:0.75rem;
-}
-
-/* Neutralize hard widths injected by SDKs */
-.wallet-grid > *{ width:100% !important; }
-.wallet-grid button,
-.wallet-grid form,
-.wallet-grid iframe,
-.wallet-grid .shopify-payment-button,
-.wallet-grid .shopify-payment-button__button,
-.wallet-grid .shopify-payment-button__button--unbranded{
-  width:100% !important;
-  max-width:none !important;
-}
-
-/* Mobile: stack everything nicely */
-@media (max-width: 749px){
-  .cart__ctas{ flex-direction:column; }
-  .cart__ctas #checkout,
-  .cart__ctas .additional-checkout-buttons{ flex:1 1 auto; }
-  .wallet-grid{ grid-template-columns: 1fr; }
-}
-
 /* Layout the footer as a centered 2-column grid */
 #main-cart-footer .cart__ctas{
   display:grid;
