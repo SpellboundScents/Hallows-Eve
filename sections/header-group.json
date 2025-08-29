@@ -103,7 +103,6 @@
         },
         "announcement_LnMGJU": {
           "type": "announcement",
-          "disabled": true,
           "settings": {
             "text": "CHECKOUT TEMPORARILY DISABLED",
             "link": ""
@@ -111,6 +110,7 @@
         },
         "announcement_6Pnnam": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "FEEL FREE TO CONTINUE TO USE THE SITE. SOME BUTTONS MAY NOT WORK.",
             "link": ""
