@@ -3783,24 +3783,22 @@ button.shopify-payment-button__button--unbranded::after {
   color: #fffaf0 !important;
 }
 /*Checkout Buttons*/
-
-/* Hide wallets by default */
+/* Wallet buttons: hidden by default */
 #main-cart-footer .additional-checkout-buttons {
-  display: none;
+  max-height: 0;
   opacity: 0;
-  transform: translateY(8px);
-  transition: opacity .3s ease, transform .3s ease;
+  overflow: hidden;
+  transition: max-height .4s ease, opacity .3s ease;
 }
 
-/* Reveal when hovering over the checkout button */
+/* When hovering checkout: expand + fade in */
 #main-cart-footer #checkout:hover + .additional-checkout-buttons,
 #main-cart-footer #checkout:focus + .additional-checkout-buttons {
-  display: block;
+  max-height: 500px;   /* large enough to fit all buttons */
   opacity: 1;
-  transform: translateY(0);
 }
 
-/* Rounded corners for each wallet button */
+/* Rounded corners for wallet buttons */
 #main-cart-footer .additional-checkout-buttons button,
 #main-cart-footer .additional-checkout-buttons .shopify-payment-button__button,
 #main-cart-footer .additional-checkout-buttons .shopify-payment-button__button--unbranded {
