@@ -3805,3 +3805,13 @@ button.shopify-payment-button__button--unbranded::after {
     overflow: hidden;
   }
 }
+/* Rounded wallet buttons */
+#main-cart-footer .additional-checkout-buttons button,
+#main-cart-footer .additional-checkout-buttons .shopify-payment-button__button,
+#main-cart-footer .additional-checkout-buttons .shopify-payment-button__button--unbranded,
+#main-cart-footer .additional-checkout-buttons .shopify-cleanslate [role="button"],
+#main-cart-footer .additional-checkout-buttons .amazonpay-button-inner-container,
+#main-cart-footer .additional-checkout-buttons .gpay-button {
+  border-radius: 12px !important;   /* adjust radius as you like */
+  overflow: hidden !important;
+}
