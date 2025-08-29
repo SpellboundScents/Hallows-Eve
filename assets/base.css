@@ -3797,13 +3797,11 @@ button.shopify-payment-button__button--unbranded::after {
     opacity: 1;
   }
 
-  /* Rounded wallet buttons */
-#main-cart-footer .additional-checkout-buttons button,
-#main-cart-footer .additional-checkout-buttons .shopify-payment-button__button,
-#main-cart-footer .additional-checkout-buttons .shopify-payment-button__button--unbranded,
-#main-cart-footer .additional-checkout-buttons .shopify-cleanslate [role="button"],
-#main-cart-footer .additional-checkout-buttons .amazonpay-button-inner-container,
-#main-cart-footer .additional-checkout-buttons .gpay-button {
-  border-radius: 12px !important;   /* adjust radius as you like */
-  overflow: hidden;
+  /* Rounded corners for wallet buttons */
+  #main-cart-footer .additional-checkout-buttons button,
+  #main-cart-footer .additional-checkout-buttons .shopify-payment-button__button,
+  #main-cart-footer .additional-checkout-buttons .shopify-payment-button__button--unbranded{
+    border-radius: 18px !important;
+    overflow: hidden !important;
+  }
 }
