@@ -3797,15 +3797,7 @@ button.shopify-payment-button__button--unbranded::after {
     opacity: 1;
   }
 
-  /* Rounded corners for wallet buttons */
-  #main-cart-footer .additional-checkout-buttons button,
-  #main-cart-footer .additional-checkout-buttons .shopify-payment-button__button,
-  #main-cart-footer .additional-checkout-buttons .shopify-payment-button__button--unbranded{
-    border-radius: 12px !important;
-    overflow: hidden;
-  }
-}
-/* Rounded wallet buttons */
+  /* Rounded wallet buttons */
 #main-cart-footer .additional-checkout-buttons button,
 #main-cart-footer .additional-checkout-buttons .shopify-payment-button__button,
 #main-cart-footer .additional-checkout-buttons .shopify-payment-button__button--unbranded,
