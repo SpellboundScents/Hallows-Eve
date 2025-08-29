@@ -3789,7 +3789,6 @@ button.shopify-payment-button__button--unbranded::after {
   #main-cart-footer .additional-checkout-buttons{
     max-height: 0;
     opacity: 0;
-    overflow: hidden;
     transition: max-height .4s ease, opacity .3s ease;
   }
   #main-cart-footer.wallets-open .additional-checkout-buttons{
