@@ -3783,22 +3783,38 @@ button.shopify-payment-button__button--unbranded::after {
   color: #fffaf0 !important;
 }
 /*Checkout Buttons*/
-/* Put Checkout (left) and Wallets (right) side-by-side */
+
+/* Put Checkout (left) and Wallets (right) side-by-side on desktop */
 .cart__ctas{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  align-items: stretch;
+  display:flex;
+  gap:1rem;
+  align-items:stretch;
+  flex-wrap:wrap;        /* lets it stack on small screens */
 }
 
-/* Force the accelerated checkout area into a 2-column grid */
+/* Make each side take half on desktop */
+.cart__ctas #checkout{
+  flex:1 1 50%;
+}
+.cart__ctas .additional-checkout-buttons{
+  flex:1 1 50%;
+}
+
+/* Kill Dawn’s narrow column + centering */
+.cart__ctas .additional-checkout-buttons{
+  margin:0 !important;
+  max-width:none !important;
+  width:100% !important;
+}
+
+/* 2×2 grid for the wallet buttons */
 .wallet-grid{
   display:grid !important;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.75rem;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap:0.75rem;
 }
 
-/* Overrule default 100% width styles inside injected SDKs */
+/* Neutralize hard widths injected by SDKs */
 .wallet-grid > *{ width:100% !important; }
 .wallet-grid button,
 .wallet-grid form,
@@ -3807,14 +3823,13 @@ button.shopify-payment-button__button--unbranded::after {
 .wallet-grid .shopify-payment-button__button,
 .wallet-grid .shopify-payment-button__button--unbranded{
   width:100% !important;
-  max-width:unset !important;
+  max-width:none !important;
 }
 
-/* Clean margins Shopify adds */
-.cart__ctas .additional-checkout-buttons{ margin:0 !important; }
-
-/* Mobile: stack nicely */
+/* Mobile: stack everything nicely */
 @media (max-width: 749px){
-  .cart__ctas{ grid-template-columns: 1fr; }
+  .cart__ctas{ flex-direction:column; }
+  .cart__ctas #checkout,
+  .cart__ctas .additional-checkout-buttons{ flex:1 1 auto; }
   .wallet-grid{ grid-template-columns: 1fr; }
 }
