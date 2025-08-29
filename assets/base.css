@@ -3821,3 +3821,45 @@ button.shopify-payment-button__button--unbranded::after {
     gap: 10px !important;
   }
 }
+
+/* ---- Wallets: 2×2 grid on desktop, centered, wide enough ---- */
+@media (min-width: 750px){
+  /* Widen the accelerated area so two buttons actually fit */
+  #main-cart-footer .additional-checkout-buttons.wallet-grid{
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+
+    /* Dawn clamps this to ~400px; we need more for 2 columns */
+    max-width: 640px !important;   /* try 560–680 if you prefer */
+    width: 100% !important;
+    margin: 0 auto !important;     /* keep centered */
+  }
+
+  /* Kill min-widths / hard widths that SDKs inject */
+  #main-cart-footer .wallet-grid > *,
+  #main-cart-footer .wallet-grid button,
+  #main-cart-footer .wallet-grid form,
+  #main-cart-footer .wallet-grid iframe,
+  #main-cart-footer .wallet-grid .shopify-payment-button,
+  #main-cart-footer .wallet-grid .shopify-payment-button__button,
+  #main-cart-footer .wallet-grid .shopify-payment-button__button--unbranded,
+  #main-cart-footer .wallet-grid .amazonpay-button-inner-container,
+  #main-cart-footer .wallet-grid .gpay-card-info-container,
+  #main-cart-footer .wallet-grid .gpay-button{
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;   /* this is the key */
+  }
+}
+
+/* Mobile stays single column (clean) */
+@media (max-width: 749px){
+  #main-cart-footer .additional-checkout-buttons.wallet-grid{
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+}
