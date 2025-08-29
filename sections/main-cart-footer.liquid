@@ -103,6 +103,8 @@
                   {%- endif -%}
                 </small>
               </div>
+            {%- else -%}
+
               <!-- Hold-for-combine checkbox (cart attributes) -->
 <div class="cart-hold-order" style="margin:12px 0;padding:10px;border:2px dashed #ff9b00;border-radius:10px;background:#fff7ec;color:#000;">
   <!-- Hidden field clears the attribute if unchecked -->
@@ -120,7 +122,6 @@
     Use dicount code "COMBINE" on your next order to have shipping manually combined. The difference will be refunded.
   </div>
 </div>
-            {%- else -%}
               <div class="cart__ctas" {{ block.shopify_attributes }}>
                 <button
                   type="submit"
