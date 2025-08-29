@@ -3796,26 +3796,4 @@ button.shopify-payment-button__button--unbranded::after {
     max-height: 800px; /* tall enough for 4+ wallets */
     opacity: 1;
   }
-  /* Desktop: hide by default, show while hovering the area (label OR description) */
-@media (hover: hover) {
-  .cart-hold-order .hold-description{
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height .35s ease, opacity .25s ease;
-  }
-  /* Show when the mouse is over the entire hold block (stays open while over the text, too) */
-  .cart-hold-order:hover .hold-description{
-    max-height: 220px;  /* adjust to fit your text */
-    opacity: 1;
-  }
-}
-
-/* Touch devices (no hover): keep it visible so it’s not hidden on mobile/tablet) */
-@media (hover: none) {
-  .cart-hold-order .hold-description{
-    max-height: none;
-    opacity: 1;
-    overflow: visible;
-  }
-}
+  
