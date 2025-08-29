@@ -58,7 +58,7 @@
         "announcement_a7d7MH"
       ],
       "settings": {
-        "auto_rotate": false,
+        "auto_rotate": true,
         "change_slides_speed": 5,
         "color_scheme": "",
         "show_line_separator": true,
@@ -90,10 +90,44 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "announcement_bar_xBjGEY": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_GDKeaz": {
+          "type": "announcement",
+          "settings": {
+            "text": "SITE MAINTENANCE IN PROGRESS!!",
+            "link": ""
+          }
+        },
+        "announcement_LnMGJU": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "CHECKOUT TEMPORARILY DISABLED",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_GDKeaz",
+        "announcement_LnMGJU"
+      ],
+      "settings": {
+        "auto_rotate": true,
+        "change_slides_speed": 3,
+        "color_scheme": "scheme-9b0f2475-ee4d-41a8-affc-f710a270d21f",
+        "show_line_separator": true,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "announcement_bar_xBjGEY"
   ]
 }
