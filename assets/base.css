@@ -3782,3 +3782,11 @@ button.shopify-payment-button__button--unbranded::after {
 .policy-page, .shopify-policy__container, .main-page-title, .rte {
   color: #fffaf0 !important;
 }
+/*Checkout Buttons*/
+.cart__ctas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: stretch;
+}
+.cart__ctas .additional-checkout-buttons { margin: 0; }s
