@@ -103,6 +103,23 @@
                   {%- endif -%}
                 </small>
               </div>
+              <!-- Hold-for-combine checkbox (cart attributes) -->
+<div class="cart-hold-order" style="margin:12px 0;padding:10px;border:2px dashed #ff9b00;border-radius:10px;background:#fff7ec;">
+  <!-- Hidden field clears the attribute if unchecked -->
+  <input type="hidden" name="attributes[Hold Order]" value="">
+
+  <label style="display:flex;align-items:center;gap:.6rem;line-height:1.3;">
+    <input type="checkbox"
+           name="attributes[Hold Order]"
+           value="Yes"
+           {% if cart.attributes['Hold Order'] == 'Yes' %}checked{% endif %}>
+    <span>🕒 Hold this order for up to <strong>14 days</strong>.</span>
+  </label>
+
+  <div style="font-size:.9rem;opacity:.85;margin-top:.5rem;">
+    Use dicount code "COMBINE" on your next order to have shipping manually combined. The difference will be refunded.
+  </div>
+</div>
             {%- else -%}
               <div class="cart__ctas" {{ block.shopify_attributes }}>
                 <button
