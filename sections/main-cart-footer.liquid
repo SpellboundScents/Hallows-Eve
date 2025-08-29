@@ -152,7 +152,32 @@
     </div>
   </div>
 </div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var footer = document.getElementById('main-cart-footer');
+  if (!footer) return;
 
+  var checkoutBtn = footer.querySelector('#checkout');
+  var shownOnce = sessionStorage.getItem('walletsShown') === '1';
+
+  function revealOnce() {
+    if (window.innerWidth < 750) return;           // desktop only
+    if (footer.classList.contains('wallets-visible')) return;
+    footer.classList.add('wallets-visible');
+    sessionStorage.setItem('walletsShown', '1');   // persist for this tab
+  }
+
+  // If already shown in this tab, keep visible
+  if (shownOnce) footer.classList.add('wallets-visible');
+
+  if (checkoutBtn) {
+    // reveal on first hover, focus, or click
+    checkoutBtn.addEventListener('mouseenter', revealOnce, { once: true });
+    checkoutBtn.addEventListener('focus', revealOnce, { once: true });
+    checkoutBtn.addEventListener('click', revealOnce, { once: true });
+  }
+});
+</script>
 {% schema %}
 {
   "name": "t:sections.main-cart-footer.name",

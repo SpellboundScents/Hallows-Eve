@@ -3783,25 +3783,29 @@ button.shopify-payment-button__button--unbranded::after {
   color: #fffaf0 !important;
 }
 /*Checkout Buttons*/
-/* Wallet buttons: hidden by default */
-#main-cart-footer .additional-checkout-buttons {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height .4s ease, opacity .3s ease;
+
+/* Desktop only */
+@media (min-width: 750px){
+  /* hidden by default, but occupies 0 height */
+  #main-cart-footer .additional-checkout-buttons{
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height .4s ease, opacity .3s ease;
+  }
+  /* once the section gets .wallets-visible, keep them open */
+  #main-cart-footer.wallets-visible .additional-checkout-buttons{
+    max-height: 800px; /* big enough for 4+ buttons */
+    opacity: 1;
+  }
+
+  /* round the wallet buttons */
+  #main-cart-footer .additional-checkout-buttons button,
+  #main-cart-footer .additional-checkout-buttons .shopify-payment-button__button,
+  #main-cart-footer .additional-checkout-buttons .shopify-payment-button__button--unbranded{
+    border-radius: 12px !important;
+    overflow: hidden;
+  }
 }
 
-/* When hovering checkout: expand + fade in */
-#main-cart-footer #checkout:hover + .additional-checkout-buttons,
-#main-cart-footer #checkout:focus + .additional-checkout-buttons {
-  max-height: 500px;   /* large enough to fit all buttons */
-  opacity: 1;
-}
-
-/* Rounded corners for wallet buttons */
-#main-cart-footer .additional-checkout-buttons button,
-#main-cart-footer .additional-checkout-buttons .shopify-payment-button__button,
-#main-cart-footer .additional-checkout-buttons .shopify-payment-button__button--unbranded {
-  border-radius: 12px !important;
-  overflow: hidden;
-}
+/* Mobile stays unchanged (no show/hide) */
