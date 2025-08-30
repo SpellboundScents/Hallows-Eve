@@ -188,15 +188,22 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 <script>
 document.addEventListener('DOMContentLoaded', function(){
-  const cb = document.getElementById('hold-order-checkbox');
+  var cb = document.getElementById('hold-order-checkbox');
   if (!cb) return;
-  cb.addEventListener('change', function(){
+
+  function saveHoldAttr(){
     fetch('/cart/update.js', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({ attributes: { "Hold Order": cb.checked ? "Yes" : "" } })
-    }).catch(()=>{});
-  });
+    }).catch(function(){ /* no-op */ });
+  }
+
+  // Save on change
+  cb.addEventListener('change', saveHoldAttr);
+
+  // If checkbox is pre-checked from a previous visit, ensure cart has it
+  if (cb.checked) saveHoldAttr();
 });
 </script>
 {% schema %}
