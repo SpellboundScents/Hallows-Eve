@@ -115,9 +115,10 @@
                           type="checkbox"
                           name="attributes[Hold Order]"
                           value="Yes"
-                          form="cart"  <!-- key: makes sure it's submitted with the cart form -->
+                          form="cart"  
+                          
                           {% if cart.attributes['Hold Order'] == 'Yes' %}checked{% endif %}>
-                    <span>🕒 Hold this order for up to <strong>7 days</strong>.</span>
+                    <span>🕒 Hold this order for up to <strong>14 days</strong>.</span>
                   </label>
 
                 <div class="hold-description" style="font-size:1.1rem;opacity:.85;margin-top:.6rem;">
