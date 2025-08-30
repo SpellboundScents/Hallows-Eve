@@ -108,12 +108,13 @@
               <!-- Hold-for-combine checkbox (cart attributes) -->
               <div class="cart-hold-order" style="margin:12px 0;padding:10px;border:2px dashed #ff9b00;border-radius:10px;background:#fff7ec;color:#000;">
                 <!-- Hidden field clears the attribute if unchecked -->
-                <input type="hidden" name="attributes[Hold Order]" value="">
+                <input type="hidden" name="attributes[Hold Order]" value="" form="cart">
 
                 <label style="display:flex;align-items:center;gap:.7rem;line-height:1.3;color:#6a0dad;">
                   <input type="checkbox"
                         name="attributes[Hold Order]"
                         value="Yes"
+                        form="cart"
                         {% if cart.attributes['Hold Order'] == 'Yes' %}checked{% endif %}>
                   <span>🕒 Hold this order for up to <strong>14 days</strong>.</span>
                 </label>
@@ -181,6 +182,19 @@ document.addEventListener('DOMContentLoaded', function () {
   walletArea.addEventListener('mouseleave', function (e){
     // if going back to checkout, don't close
     if (!checkoutBtn.contains(e.relatedTarget)) closeWallets();
+  });
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const cb = document.getElementById('hold-order-checkbox');
+  if (!cb) return;
+  cb.addEventListener('change', function(){
+    fetch('/cart/update.js', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ attributes: { "Hold Order": cb.checked ? "Yes" : "" } })
+    }).catch(()=>{});
   });
 });
 </script>
