@@ -121,6 +121,80 @@
         "padding_bottom": 36
       }
     },
+    "featured_product_BzgDCL": {
+      "type": "featured-product",
+      "blocks": {
+        "text_dxjDyL": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_UcRwLx": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_zJ6HfU": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_CdpVTW": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_GWkQUQ": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_nttXjL": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_YfPVYJ": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_dxjDyL",
+        "title_UcRwLx",
+        "price_zJ6HfU",
+        "variant_picker_CdpVTW",
+        "quantity_selector_GWkQUQ",
+        "buy_buttons_nttXjL",
+        "share_YfPVYJ"
+      ],
+      "custom_css": [
+        ".featured-product {border-radius: 20px; /* rounded corners */ border: 2px solid #a855f7; /* purple border (adjust shade as needed) */ box-shadow: 0 0 10px #a855f7, 0 0 20px rgba(168, 85, 247, 0.7), 0 0 40px rgba(168, 85, 247, 0.5); /* glowing edges */ overflow: hidden; /* ensures content respects rounded edges */ transition: box-shadow 0.3s ease, transform 0.2s ease;}",
+        ".featured-product-card:hover {transform: translateY(-5px); /* subtle lift */ box-shadow: 0 0 15px #c084fc, 0 0 30px rgba(192, 132, 252, 0.8), 0 0 50px rgba(168, 85, 247, 0.6);}"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "hocus-pocus-sampler",
+        "color_scheme": "",
+        "secondary_background": true,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "none",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "collection_list_n4Dbx6": {
       "type": "collection-list",
       "blocks": {
@@ -168,6 +242,7 @@
     "page_MBAXhe",
     "page_A3brBR",
     "featured_collection_kKYryj",
+    "featured_product_BzgDCL",
     "collection_list_n4Dbx6"
   ]
 }
