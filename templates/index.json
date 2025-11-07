@@ -96,11 +96,11 @@
       "type": "featured-collection",
       "name": "Current RTS",
       "settings": {
-        "collection": "october-2025-rts",
+        "collection": "november-2025",
         "products_to_show": 4,
         "title": "This Month's RTS",
         "heading_size": "h2",
-        "description": "<h5>October 2025 Ready-to-Ship!</h5>",
+        "description": "<h5>November 2025 Ready-to-Ship!</h5>",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 4,
