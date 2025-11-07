@@ -175,6 +175,7 @@
         "buy_buttons_nttXjL",
         "share_YfPVYJ"
       ],
+      "disabled": true,
       "custom_css": [
         ".featured-product {border-radius: 20px; /* rounded corners */ border: 2px solid #a855f7; /* purple border (adjust shade as needed) */ box-shadow: 0 0 10px #a855f7, 0 0 20px rgba(168, 85, 247, 0.7), 0 0 40px rgba(168, 85, 247, 0.5); /* glowing edges */ overflow: hidden; /* ensures content respects rounded edges */ transition: box-shadow 0.3s ease, transform 0.2s ease;}",
         ".featured-product-card:hover {transform: translateY(-5px); /* subtle lift */ box-shadow: 0 0 15px #c084fc, 0 0 30px rgba(192, 132, 252, 0.8), 0 0 50px rgba(168, 85, 247, 0.6);}"
