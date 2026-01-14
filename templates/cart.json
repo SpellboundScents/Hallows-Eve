@@ -41,6 +41,7 @@
     },
     "featured-collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "collection": "clearance",
         "products_to_show": 4,
