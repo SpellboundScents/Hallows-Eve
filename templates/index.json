@@ -96,7 +96,7 @@
       "type": "featured-collection",
       "name": "Current RTS",
       "settings": {
-        "collection": "october-2026-rts",
+        "collection": "november-2026-rts",
         "products_to_show": 4,
         "title": "This Month's RTS",
         "heading_size": "h2",
